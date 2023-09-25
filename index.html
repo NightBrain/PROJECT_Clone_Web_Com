@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer CMRU</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CDN CSS links boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .dropdown {
+            padding: auto 100px;
+        }
+
+        .dropbtn {
+            text-decoration: none;
+            color: #666666;
+            font-size: 15px;
+            border: none;
+        }
+
+        .dropbtn:hover {
+            color: #3EC387;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        .dropdown-content a {
+            color: #666666;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .dropdown-content a:hover {
+            color: #3EC387;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .reg {
+            border: 15px #a9ffd8;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 8px;
+            background-color: #3EC387;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .t1 {
+            font-weight: bold;
+            color: #666666;
+            padding: 2px 12px;
+        }
+
+        .t1:hover {
+            color: #3EC387;
+        }
+
+        .c1 {
+            background-color: rgb(246, 246, 246);
+            width: 225px;
+            height: 225px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 80px auto 70px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .F,.L {
+            background-color: rgb(246, 246, 246);
+            width: 370px;
+            height: 370px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 40px auto 40px auto;
+        }
+        .c2 {
+            background-color: rgb(242, 242, 242);
+            border-radius: 20px;
+            margin: 20px auto 30px auto;
+        }
+
+        .ico {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            font-size: 50px;
+        }
+
+        .out1 {
+            background-color: #0f0f0f;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out2 {
+            background-color: #EDC607;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out3 {
+            background-color: #E84D76;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out4 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out5 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        p {
+            font-size: 14px;
+        }
+        .news {
+            padding: 20px;
+        }
+        .nb {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nbp {
+            padding: 0 0 0 10px;
+        }
+        .imgg {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+            <a href="index.html"><img src="img/logonav.png" alt=""></a>
+            <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
+                href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
+                Computer CMRU</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
+                <a class="navbar-brand col-lg-2 me-0" href="#"></a>
+                <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" aria-current="page" href="index.html">หน้าหลัก</a>
+                    </li>
+                    <li class="dropdown t1">
+                        <a class="dropbtn">เกี่ยวกับภาควิชา</a>
+                        <div class="dropdown-content">
+                            <a href="#">ประวัติภาควิชา</a>
+                            <a href="#">ปรัชญา วิสัยทัศน์ พันธกิจ</a>
+                            <a href="#">วีดิทัศน์แนะนำภาควิชา</a>
+                            <a href="#">บุคลาลากร</a>
+                        </div>
+                    </li>
+                    <li class="dropdown t1">
+                        <a class="dropbtn">หลักสูตร</a>
+                        <div class="dropdown-content">
+                            <a href="#">วิทยาการคอมพิวเตอร์</a>
+                            <a href="#">เทคโนยีสารสนเทศ</a>
+                            <a href="#">คอมพิวเตอร์ศึกษา</a>
+                            <a href="#">เทคโนโลยีเว็บ</a>
+                            <a href="#">นวัตกรรมดิจิทัล</a>
+                            <a href="#">วีดิทัศน์แนะนำหลักสูตร</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" href="#">ข่าวประชาสัมพันธ์</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" href="#">กิจกรรมของภาควิชา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" href="#">ติดต่อภาควิชา</a>
+                    </li>
+                    <li class="dropdown t1">
+                        <a class="dropbtn">อื่นๆ</a>
+                        <div class="dropdown-content">
+                            <a href="#">เตรียม/ฝึกประสบการณ์</a>
+                            <a href="#">การศึกษาอิสระด้านคอมพิวเตอร์</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-lg-flex col-lg-4 justify-content-lg-end">
+                    <a class="button reg" style="vertical-align:middle" href="https://reg.cmru.ac.th/registrar/home.asp"
+                        target="_blank"><span><i class='bx bxs-graduation'></i> REG</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Carousel -->
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#" target="_black"><img src="img/b1.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b02.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b03.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b04.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b05.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b06.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b07.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b08.png" alt="" width="100%" height="100%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#" target="_black"><img src="img/b09.png" alt="" width="100%" height="100%"></a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End Carousel -->
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <a href="#">
+                    <div class="container c1">
+                        <div class="out1"><i class='bx bxs-bank bx-tada ico' style="color:#ffffff;"></i></div>
+                        <h3>CMRU</h3>
+                        <p>มหาวิทยาลัยราชภัฏเชียงใหม่</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c1">
+                        <div class="out2"><i class='bx bx-atom bx-tada ico' style='color:#ffffff'></i></div>
+                        <h3>SCIENCE</h3>
+                        <p>คณะวิทยาศาสตร์และเทคโนโลยี</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c1">
+                        <div class="out3"><i class='bx bx-code-alt bx-tada ico' style='color:#ffffff'></i></div>
+                        <h3>ISTUDY</h3>
+                        <p>ระบบค้นคว้าอิสระด้านคอมพิวเตอร์</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c1">
+                        <div class="out4"><i class='bx bxs-graduation bx-tada ico' style='color:#ffffff'></i></div>
+                        <h3>COMED</h3>
+                        <p>ระบบฝึกประสบการณ์วิชาชีพครู</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c1">
+                        <div class="out5"><i class='bx bx-briefcase-alt bx-tada ico' style='color:#ffffff'></i></div>
+                        <h3>INTERN SHIP</h3>
+                        <p>เตรียม/ฝึกประสบการณ์วิชาชีพ</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container text-center">
+        <h2>ติดต่อภาควิชาคอมพิวเตอร์</h2>
+        <div class="row">
+            <div class="col">
+                <div class="F">
+                    <iframe name="f13d28251e7d6c" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v3.2/plugins/page.php?adapt_container_width=true&amp;app_id=1460844434169235&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df11bec0b09e80f%26domain%3Dwww.computer.cmru.ac.th%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.computer.cmru.ac.th%252Ff251594bd8e85ec%26relation%3Dparent.parent&amp;container_width=359&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2F&amp;locale=en_GB&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=timeline" style="border: none; visibility: visible; width: 340px; height: 271px;" class=""></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="L">
+                    <img src="img/LineGroupCom.jpg" alt="" width="90%">
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>ข่าวประชาสัมพันธ์</h2>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <h2>กิจกรรมภาควิชาคอมพิวเตอร์</h2>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c2">
+                    <div class="row news">
+                        <div class="col-lg-3 p-2">
+                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                        </div>
+                        <div class="col">
+                            <div class="row nb">
+                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
+                            </div>
+                            <div class="row nbp">
+                                <p>1 กุมภาพันธ์ 2566</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

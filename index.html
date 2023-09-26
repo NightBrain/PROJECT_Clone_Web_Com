@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
+
+    <link rel="stylesheet" href="buttons.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- CDN CSS links boxicons -->
+    <!-- CDN CSS links icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
+        body {
+            background-color: rgb(246, 246, 246);
+        }
+
         .dropdown {
             padding: auto 100px;
         }
@@ -56,6 +63,7 @@
 
         .reg {
             border: 15px #a9ffd8;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .button {
@@ -108,7 +116,7 @@
         }
 
         .c1 {
-            background-color: rgb(246, 246, 246);
+            background-color: rgb(255, 255, 255);
             width: 225px;
             height: 225px;
             border-radius: 20px;
@@ -117,19 +125,44 @@
             box-shadow: 5px 10px 8px #888888;
         }
 
-        .F,.L {
+        .c3 {
             background-color: rgb(246, 246, 246);
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 30px auto 10px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .F,
+        .L {
+            background-color: rgb(255, 255, 255);
             width: 370px;
             height: 370px;
             border-radius: 20px;
             padding: 10px;
             margin: 40px auto 40px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
         .c2 {
-            background-color: rgb(242, 242, 242);
+            background-color: #effaff;
+            width: 305px;
+            height: 450px;
             border-radius: 20px;
-            margin: 20px auto 30px auto;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
+        .c4 {
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+        }
+
 
         .ico {
             display: flex;
@@ -187,19 +220,45 @@
         p {
             font-size: 14px;
         }
-        .news {
-            padding: 20px;
+
+
+        .bb {
+            font-weight: bold;
+            margin: 50px auto;
         }
-        .nb {
-            padding: 10px;
-            font-size: 20px;
+
+        .hc {
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .end {
+            text-align: end;
+        }
+
+
+        .imgg {
+            border-radius: 20px;
+        }
+
+        .ii {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ct {
+            font-size: 30px;
+            margin: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .nn {
             font-weight: bold;
         }
-        .nbp {
-            padding: 0 0 0 10px;
-        }
-        .imgg {
-            border-radius: 15px;
+
+        .fm {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -324,6 +383,7 @@
     </div>
     <!-- End Carousel -->
 
+    <!-- Start link out -->
     <div class="container text-center">
         <div class="row">
             <div class="col">
@@ -374,13 +434,20 @@
         </div>
         <hr>
     </div>
+    <!-- End link out -->
 
+    <!-- Start Contact -->
     <div class="container text-center">
-        <h2>ติดต่อภาควิชาคอมพิวเตอร์</h2>
+        <h2 class="bb">ติดต่อภาควิชาคอมพิวเตอร์</h2>
         <div class="row">
             <div class="col">
                 <div class="F">
-                    <iframe name="f13d28251e7d6c" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v3.2/plugins/page.php?adapt_container_width=true&amp;app_id=1460844434169235&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df11bec0b09e80f%26domain%3Dwww.computer.cmru.ac.th%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.computer.cmru.ac.th%252Ff251594bd8e85ec%26relation%3Dparent.parent&amp;container_width=359&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2F&amp;locale=en_GB&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=timeline" style="border: none; visibility: visible; width: 340px; height: 271px;" class=""></iframe>
+                    <iframe name="f13d28251e7d6c" width="1000px" height="1000px"
+                        data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin"
+                        frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                        allow="encrypted-media"
+                        src="https://www.facebook.com/v3.2/plugins/page.php?adapt_container_width=true&amp;app_id=1460844434169235&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df11bec0b09e80f%26domain%3Dwww.computer.cmru.ac.th%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.computer.cmru.ac.th%252Ff251594bd8e85ec%26relation%3Dparent.parent&amp;container_width=359&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2F&amp;locale=en_GB&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=timeline"
+                        style="border: none; visibility: visible; width: 340px; height: 271px;" class=""></iframe>
                 </div>
             </div>
             <div class="col">
@@ -391,98 +458,393 @@
         </div>
         <hr>
     </div>
+    <!-- End Contact -->
 
-
+    <!-- Start News -->
     <div class="container">
+        <h2 class="text-center bb">ข่าวประชาสัมพันธ์</h2>
         <div class="row">
             <div class="col">
-                <h2>ข่าวประชาสัมพันธ์</h2>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n01.jpg" alt="" width="100%">
+                        <h6 class="hc">ประชาสัมพันธ์กิจกรรม …”Sci – Tech CMRU Education Expo 2023″…</h6>
+                        <br><br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n02.jpg" alt="" width="100%">
+                        <h6 class="hc">ภาควิชาคอมพิวเตอร์ขอแสดงความยินดีกับผู้ได้รับการคัดเลือกเป็นศิษย์เก่าดีเด่น</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 10 กันยายน 2564 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n03.jpg" alt="" width="100%">
+                        <h6 class="hc">อบรบเชิงปฏิบัติการหลักสูตรการตลาดออนไลน์ลำไย ให้กับ สปก.ที่ดิน ลำพูน</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 มีนาคม 2564 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n04.jpg" alt="" width="100%">
+                        <h6 class="hc">ภาควิชาคอมพิวเตอร์จัดโครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่ 21</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 23 กุมภาพันธ์ 2564 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n05.jpg" alt="" width="100%">
+                        <h6 class="hc">สมัครด่วน TCAS รอบที่ 2 รอบ QUOTA 1 มี.ค.-20 เม.ย. 64
+                            มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 7 มกราคม 2564 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n06.jpg" alt="" width="100%">
+                        <h6 class="hc">สมัครด่วน TCAS รอบที่ 1 รอบ Portfolio มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 4 พฤศจิกายน 2563 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n07.png" alt="" width="100%">
+                        <h6 class="hc">ขอเชิญเข้าประชุมการศึกษาอิสระฯ ภาคเรียนที่ 2/2562 วันที่ 8 พ.ย. 2562</h6>
+                        <br><br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 5 พฤศจิกายน 2562 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/news/n08.jpg" alt="" width="100%">
+                        <h6 class="hc">ขอเชิญอาจารย์ และ นักศึกษา
+                            เข้าร่วมอบรมเชิงปฏิบัติการด้านการใช้งานระบบการเรียนการสอนออนไลน์</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 11 เมษายน 2562 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center k">
+            <a href="" class="button-85">ข่าวประชาสัมพันธ์ทั้งหมด</a>
+        </div>
+        <hr>
+    </div>
+    <!-- End News -->
+    <!-- Start Activity -->
+    <div class="container">
+        <h2 class="text-center bb">กิจกรรมภาควิชาคอมพิวเตอร์</h2>
+        <div class="row">
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a01.jpg" alt="" width="100%">
+                        <h6 class="hc">กีฬาพี่น้องสัมพันธ์ภาควิชาคอมพิวเตอร์ ประจำปี 2566</h6>
+                        <br><br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 1 กุมภาพันธ์ 2566 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a02.jpg" alt="" width="100%">
+                        <h6 class="hc">โครงการค่ายเยาวชนคนดิจิทัล สำหรับนักเรียนโรงเรียนส่วนบุญโญปถัมภ์ จ.ลำพูน</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 28 ตุลาคม 2565 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a03.jpg" alt="" width="100%">
+                        <h6 class="hc">โครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่ 21 (เพิ่มพูนทักษะวิชาการ)
+                            ภาควิชาคอมพิวเตอร์</h6>
+                        <br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a04.jpg" alt="" width="100%">
+                        <h6 class="hc">กิจกรรมไหว้ครูภาควิชาคอมพิวเตอร์</h6>
+                        <br><br><br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a05.jpg" alt="" width="100%">
+                        <h6 class="hc">กิจกรรม การแข่งขัน ROV E-Sport (ระดับมัธยมศึกษาตอนปลาย) ภาควิชาคอมพิวเตอร์
+                            ในงานสัปดาห์วิทยาศาสตร์ </h6>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 24 สิงหาคม 2565 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a06.jpg" alt="" width="100%">
+                        <h6 class="hc">ภาควิชาคอมพิวเตอร์แสดงความยินดีกับศิษย์เก่าและศิษย์ปัจจุบัน
+                            ที่เข้ารับรางวัลเนื่องในสัปดาห์วิทยาศาสตร์ ปี พ.ศ. 2565</h6>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 18 สิงหาคม 2565 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a07.jpg" alt="" width="100%">
+                        <h6 class="hc">โครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม กิจกรรมอบรมการพัฒนาระบบ
+                            Smart Farm ด้วย Arduino board </h6>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 8 สิงหาคม 2565 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#">
+                    <div class="container c2">
+                        <img class="imgg" src="img/atvt/a08.png" alt="" width="100%">
+                        <h6 class="hc">กิจกรรมอบรมการพัฒนาเว็บแอปพลิเคชั้นขั้นสูง</h6>
+                        <br><br>
+                        <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 6 สิงหาคม 2565 </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center k">
+            <a href="" class="button-85">ข่าวประชาสัมพันธ์ทั้งหมด</a>
+        </div>
+        <hr>
+    </div>
+    <!-- End Activity -->
+
+
+    <!-- Start หลักสูตร-->
+    <div class="container text-center">
+        <h2 class="text-center bb">หลักสูตรที่เปิดสอนในภาควิชาคอมพิวเตอร์</h2>
+        <div class="row">
+            <div class="col">
+                <div class="container c4 ii">
+                    <a href="#" style="border: none;"><img src="img/it.png" style="width:100%"></a>
+                </div>
+                <h6 class="hc">สาขาวิชา เทคโนโลยีสารสนเทศ</h6>
+            </div>
+
+            <div class="col">
+                <div class="container c4 ii">
+                    <a href="#" style="border: none;"><img src="img/comsci.png" style="width:100%"></a>
+                </div>
+                <h6 class="hc">สาขาวิชา วิทยาการคอมพิวเตอร์</h6>
+            </div>
+
+            <div class="col">
+                <div class="container c4 ii">
+                    <a href="#" style="border: none;"><img src="img/come.png" style="width:100%"></a>
+                </div>
+                <h6 class="hc">สาขาวิชา คอมพิวเตอร์ศึกษา</h6>
+            </div>
+
+            <div class="col">
+                <div class="container c4 ii">
+                    <a href="#" style="border: none;"><img src="img/web.png" style="width:100%"></a>
+                </div>
+                <h6 class="hc">สาขาวิชา เทคโนโลยีเว็บ</h6>
+            </div>
+
+            <div class="col">
+                <div class="container c4 ii">
+                    <a href="#" style="border: none;"><img src="img/lcom.png" style="width:100%"></a>
+                </div>
+                <h6 class="hc">สาขาวิชา นวัตกรรมดิจิทัล</h6>
+            </div>
+
+        </div>
+        <hr>
+    </div>
+    <!-- End หลักสูตร -->
+
+
+    <!-- Start Contact -->
+    <div class="container text-center">
+        <h2 class="text-center bb">CONTACT VARIOUS OFFICES</h2>
+        <div class="row">
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal01">
+                        <img src="img/logo.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">มหาวิทยาลัยราชภัฏเชียงใหม่</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal01" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">มหาวิทยาลัยราชภัฏเชียงใหม่</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 202 ถ.ช้างเผือก
+                            ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300 <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5396
+                            (โทรศัพท์) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5319 (โทรสาร)
+                            <br>
+                            <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : saraban@cmru.ac.th
+                            <hr>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                                <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> : Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal02">
+                        <img src="img/lsci.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">คณะวิทยาศาสตร์และเทคโนโลยี</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal02" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">คณะวิทยาศาสตร์และเทคโนโลยี</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : อาคารบริหารงานกลาง (SCI1)
+                            คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่ เลขที่ 180 ม.7 ต.ขี้เหล็ก อ.แม่ริม
+                            จ.เชียงใหม่ 50180 <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 062-3104909
+                            (สำนักงานคณบดี) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 061-2653344
+                            (ฝ่ายวิชาการ) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 081-7093043
+                            (ฝ่ายกิจการนักศึกษา) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 065-3760535
+                            (ศูนย์วิทยาศาสตร์) <br>
+                            <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : saraban_sci@cmru.ac.th
+                            (งานสารบรรณ) <br>
+                            <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : contact_sci@cmru.ac.th
+                            (ติดต่อสอบถาม) <br>
+                            <hr>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                                <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> : Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal03">
+                        <img src="img/lreg.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">สำนักทะเบียนและประมวลผล</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal03" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">สำนักทะเบียนและประมวลผล</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : สำนักทะเบียนและประมวลผล
+                            มหาวิทยาลัยราชภัฏเชียงใหม่ 202 ถ.ช้างเผือก ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300 <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5960 ถึง 80
+                            (เบอร์โทรศัพท์) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5970
+                            (เบอร์โทรสาร) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 09-2802-1812
+                            (เบอร์มือถือ) <br>
+                            <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : registrar@cmru.ac.th <br>
+                            <hr>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                                <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> : Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
-                        </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal04">
+                        <img src="img/ldgt.png" style="width:100%">
+                    </button>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                <h6 class="hc">สำนักดิจิทัลเพื่อการศึกษา</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal04" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">สำนักดิจิทัลเพื่อการศึกษา</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
-                        </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : 202 ถ.ช้างเผือก ต.ช้างเผือก
+                            อ.เมือง จ.เชียงใหม่ <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5933
+                            (เบอร์โทรศัพท์) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5934
+                            (เบอร์โทรสาร) <br>
+                            <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : admin@cmru.ac.th <br>
+                            <hr>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                                <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> : Website</a>
                             </div>
                         </div>
                     </div>
@@ -490,103 +852,156 @@
             </div>
 
 
+        </div>
+        <div class="row">
             <div class="col">
-                <h2>กิจกรรมภาควิชาคอมพิวเตอร์</h2>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal06">
+                        <img src="img/latvt.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">ระบบบันทึกกิจกรรมนักศึกษา</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal06" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">ระบบบันทึกกิจกรรมนักศึกษา</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 053-885699
+                            (เบอร์โทรศัพท์) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 053-885443
+                            (เบอร์โทรศัพท์) <br>
+                            <hr>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal07">
+                        <img src="img/lms.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">กองทุนเงินให้กู้ยืมเพื่อการศึกษา</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal07" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">กองทุนเงินให้กู้ยืมเพื่อการศึกษา</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 062-3104900
+                            (เบอร์โทรศัพท์) <br>
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 053-885432
+                            (เบอร์โทรศัพท์) <br>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal08">
+                        <img src="img/lssd.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">กองพัฒนานักศึกษา</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal08" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">กองพัฒนานักศึกษา</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0623104914
+                            (เบอร์โทรศัพท์) <br>
+                            <i class='bx bxs-message-rounded-dots bx-tada' style='color:#3EC387'></i> : 0623104914 (ID
+                            Line) <br>
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                                <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> : Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal09">
+                        <img src="img/lst.png" style="width:100%">
+                    </button>
+                </div>
+                <h6 class="hc">ST - CMRU</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal09" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">ST - CMRU</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
-                        </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col">
+                <div class="container c3 ii">
+                    <button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal10">
+                        <img src="img/lnct.png" style="width:90%">
+                    </button>
                 </div>
-                <div class="c2">
-                    <div class="row news">
-                        <div class="col-lg-3 p-2">
-                            <img src="img/news/01.jpg" alt="" width="100%" class="imgg">
+                <h6 class="hc">หน่วยนักศึกษาวิชาทหาร</h6>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 nn" id="exampleModalLabel">หน่วยนักศึกษาวิชาทหาร</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col">
-                            <div class="row nb">
-                                <a href="">นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)</a>
-                            </div>
-                            <div class="row nbp">
-                                <p>1 กุมภาพันธ์ 2566</p>
+                        <div class="modal-body fm" style="text-align: start;">
+                            <div class="text-center">
+                                <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <hr>
     </div>
-
-
+    <!-- End Contact -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
-    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="../about/sty.css">
     <link rel="stylesheet" href="buttons.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../img/logo.png">
@@ -115,12 +115,13 @@
             color: #3EC387;
         }
 
-        .c5 {
+        .c6 {
             color: white;
-            border-radius: 5px;
-            padding: 10px;
+            padding: 20px;
+            border-radius: 50px;
             margin: 50px auto 70px auto;
             box-shadow: 5px 10px 8px #888888;
+            width: 3000px;
             background: red;
             /* For browsers that do not support gradients */
             background: -webkit-linear-gradient(90deg, rgba(37, 117, 252, 1), rgba(245, 87, 108, 1));
@@ -222,6 +223,18 @@
         .dfn {
             font-weight: bold;
         }
+
+        @media screen and (max-width: 480px) {
+            .c6 {
+                width: 360px;
+                height: 265px;
+            }
+
+            .you {
+                width: 320px;
+                height: 225px;
+            }
+        }
     </style>
 </head>
 
@@ -303,12 +316,12 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="imagee" src="img/his.png" alt="" width="100%" height="100%">
+                    <img class="imagee" src="../about/img/his.png" alt="" width="100%" height="100%">
                     <div class="overlay">
                         <div class="container">
                             <div class="carousel-caption ht">
-                                <h1>ปรัชญา วิสัยทัศน์ พันธกิจ</h1>
-                                <p>Vision</p>
+                                <h1>วีดิทัศน์แนะนำหลักสูตร</h1>
+                                <p>Course introduction video</p>
                             </div>
                         </div>
                     </div>
@@ -320,78 +333,15 @@
         <!-- Start timeline -->
         <section class="gradient-custom-5">
             <div class="container py-5">
-                <div class="container py-5 ">
-                    <div class="main-timeline-4 text-white">
-                        <div class="timeline-4 left-4">
-                            <div class="card gradient-custom">
-                                <div class="card-body p-4">
-                                    <h2 class="k">ปรัชญา</h2>
-                                    <p class="kf">
-                                        เทคโนโลยีสารสนเทศ และ คอมพิวเตอร์ เพื่อพัฒนาท้องถิ่น
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-4 right-4">
-                            <div class="card gradient-custom-4">
-                                <div class="card-body p-4">
-                                    <h2 class="k">วิสัยทัศน์</h2>
-                                    <p class="kf">
-                                        “สาขาวิชาคอมพิวเตอร์มุ่งผลิตบัณฑิตที่มีความรู้คู่คุณธรรมเพื่อพัฒนาท้องถิ่นสู่สากล”
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-4 left-4">
-                            <div class="card gradient-custom">
-                                <div class="card-body p-4">
-                                    <h2 class="k">อัตลักษณ์</h2>
-                                    <p class="kf">“บัณฑิตมีทักษะวิชาชีพด้านคอมพิวเตอร์”
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-4 right-4">
-                            <div class="card gradient-custom-4">
-                                <div class="card-body p-4">
-                                    <h2 class="k">พันธกิจ</h2>
-                                    <p>
-                                        <li class="kf" type="square">
-                                            ผลิตบัณฑิตที่ได้มาตรฐานวิชาชีพของสาขาวิชาคอมพิวเตอร์
-                                        </li>
-                                        <li class="kf" type="square">สนับสนุนการวิจัย พัฒนานวัตกรรมคอมพิวเตอร์
-                                            และการถ่ายทอดเทคโนโลยีแก่ชุมชนและสังคม</li>
-                                        <li class="kf" type="square">ส่งเสริมให้นักศึกษา บุคลากรมีคุณธรรม จริยธรรม
-                                            และมีส่วนร่วมในการทำนุบำรุงศิลปวัฒนธรรม <br> และอนุรักษ์สิ่งแวดล้อม</li>
-                                        <li class="kf" type="square">พัฒนาระบบบริหารจัดการให้มีคุณภาพ
-                                            โดยยึดหลักธรรมาภิบาล
-                                        </li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-4 left-4">
-                            <div class="card gradient-custom">
-                                <div class="card-body p-4">
-                                    <h2 class="k">ประเด็นยุทธ์ศาสตร์</h2>
-                                    <p>
-                                        <li class="kf" type="square">
-                                            การจัดการศึกษาของสาขาวิชาคอมพิวเตอร์ให้มีคุณภาพตามเกณฑ์มาตรฐานของอุดมศึกษา
-                                        </li>
-                                        <li class="kf" type="square">การพัฒนานักศึกษาให้เป็นบัณฑิตที่มี คุณธรรม จริยธรรม
-                                            และมีส่วนร่วมในการทำนุบำรุงศิลปวัฒนธรรม <br>
-                                            สามารถดำรงตนในสังคมได้อย่างมีความสุข</li>
-                                        <li class="kf" type="square">
-                                            การพัฒนางานวิจัยและนวัตกรรมคอมพิวเตอร์ที่สามารถนำไปประยุกต์ใช้ในท้องถิ่น
-                                        </li>
-                                        <li class="kf" type="square">การพัฒนาสาขาวิชาให้มีระบบบริหารจัดการที่มีคุณภาพ
-                                        </li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="container c6">
+                    <iframe style="border-radius: 40px;" class="you" width="1280" height="720"
+                        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2Fvideos%2F1918825158136847%2F&show_text=false&width=560&t=0"
+                        width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        allowFullScreen="true"></iframe>
                 </div>
+            </div>
         </section>
         <!-- End timeline -->
 

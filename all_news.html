@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
-    <link rel="stylesheet" href="../about/sty.css">
-    <link rel="stylesheet" href="../buttons.css">
+
+    <link rel="stylesheet" href="buttons.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -115,13 +115,101 @@
             color: #3EC387;
         }
 
-        .c6 {
-            background-color: white;
-            padding: 20px;
-            border-radius: 50px;
-            margin: 50px auto 70px auto;
+        .c1 {
+            background-color: rgb(255, 255, 255);
+            width: 225px;
+            height: 225px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 80px auto 70px auto;
             box-shadow: 5px 10px 8px #888888;
-            width: 3000px;
+        }
+
+        .c3 {
+            background-color: rgb(246, 246, 246);
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 30px auto 10px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .F,
+        .L {
+            background-color: rgb(255, 255, 255);
+            width: 370px;
+            height: 370px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 40px auto 40px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c2 {
+            background-color: #effaff;
+            width: 305px;
+            height: 450px;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c4 {
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+        }
+
+
+        .ico {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            font-size: 50px;
+        }
+
+        .out1 {
+            background-color: #0f0f0f;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out2 {
+            background-color: #EDC607;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out3 {
+            background-color: #E84D76;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out4 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out5 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
         }
 
         a {
@@ -148,8 +236,9 @@
             text-align: end;
         }
 
+
         .imgg {
-            filter: drop-shadow(0 0 20px #ffffff);
+            border-radius: 20px;
         }
 
         .ii {
@@ -175,64 +264,6 @@
         .foot {
             color: #3EC387;
         }
-
-        .hd {
-            font-size: 20px;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #000000df;
-        }
-
-        .ht {
-            top: 40%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .kf {
-            color: white;
-            font-size: 20px;
-        }
-
-        .pf {
-            font-size: 20px;
-        }
-
-        .dfn {
-            font-weight: bold;
-        }
-
-        @media screen and (max-width: 480px) {
-            .c6 {
-                width: 360px;
-                height: 1300px;
-            }
-        }
-
-        .cen {
-            text-align: center;
-        }
-
-        .pa {
-            padding: 0 0 0 100px;
-            margin-top: 20px;
-        }
-
-        .to {
-            color: orange;
-            font-weight: bold;
-        }
     </style>
 </head>
 
@@ -241,7 +272,7 @@
     <a name="top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
             <div class="container-fluid">
-                <a href="index.html"><img src="../img/logonav.png" alt=""></a>
+                <a href="index.html"><img src="img/logonav.png" alt=""></a>
                 <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
                     href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
                     Computer CMRU</a>
@@ -255,27 +286,30 @@
                     <a class="navbar-brand col-lg-2 me-0" href="#"></a>
                     <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" aria-current="page" href="../index.html"><i
+                            <a class="nav-link dropdown t1" aria-current="page" href="index.html"><i
                                     class='bx bxs-home'></i> หน้าหลัก</a>
                         </li>
                         <li class="dropdown t1">
                             <a class="dropbtn">เกี่ยวกับภาควิชา</a>
                             <div class="dropdown-content">
-                                <a href="history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
-                                <a href="vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
-                                <a href="vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
-                                <a href="staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
+                                <a href="about/history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
+                                <a href="about/vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
+                                <a href="about/vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
+                                <a href="about/staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
                             </div>
                         </li>
                         <li class="dropdown t1">
                             <a class="dropbtn">หลักสูตร</a>
                             <div class="dropdown-content">
-                                <a href="#"><i class='bx bx-desktop'></i> วิทยาการคอมพิวเตอร์</a>
-                                <a href="#"><i class='bx bx-wifi'></i> เทคโนยีสารสนเทศ</a>
-                                <a href="#"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
-                                <a href="#"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
-                                <a href="#"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
-                                <a href="#"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำหลักสูตร</a>
+                                <a href="course/computer-science.html"><i class='bx bx-desktop'></i>
+                                    วิทยาการคอมพิวเตอร์</a>
+                                <a href="course/information-technology.html"><i class='bx bx-wifi'></i>
+                                    เทคโนยีสารสนเทศ</a>
+                                <a href="course/comed-3.html"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
+                                <a href="course/web-programming.html"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
+                                <a href="course/digital.html"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
+                                <a href="course/vdocourse.html"><i class='bx bxs-movie-play'></i>
+                                    วีดิทัศน์แนะนำหลักสูตร</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -310,81 +344,107 @@
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="imagee" src="../img/b06.png" alt="" width="100%" height="100%">
-                    <div class="overlay">
-                        <div class="container">
-                            <div class="carousel-caption ht">
-                                <img class="imgg" src="../img/come.png" alt="" width="40%">
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" target="_black"><img src="img/b1.png" alt="" width="100%" height="100%"></a>
                 </div>
             </div>
         </div>
         <!-- End Carousel -->
 
-        <!-- Start timeline -->
-        <section class="gradient-custom-5">
-            <div class="container py-5">
-                <div class="container c6">
-                    <h1 class="cen to">คอมพิวเตอร์ศึกษา (Computer Education)</h1>
-                    <h4 class="cen">หลักสูตรครุศาสตรบัณฑิต สาขาวิชาคอมพิวเตอร์ศึกษา<br>
-                        (Bachelor of Education Program in Computer Education) <br>
-                    </h4>
-                    <hr>
-                    <div class="pa">
-                        <h4 class="to">ชื่อปริญญา</h4>
-                        <b>ชื่อเต็ม</b> : &nbsp;ครุศาสตรบัณฑิต (คอมพิวเตอร์ศึกษา)<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        Bachelor of Education (Computer Education) <br>
-                        <b>ชื่อย่อ</b>&nbsp;&nbsp; : &nbsp;ค.บ. (คอมพิวเตอร์ศึกษา)<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        B.Ed. (Computer Education) <br>
-                    </div>
-                    <div class="pa">
-                        <h4 class="to">จำนวนหน่วยกิตที่เรียนตลอดหลักสูตร</h4> ไม่น้อยกว่า 138 หน่วยกิต
-                    </div>
-                    <div class="pa">
-                        <h4 class="to">รูปแบบหลักสูตร</h4>
-                        <li type="square">
-                            หลักสูตรระดับปริญญาตรี หลักสูตร 4 ปี
-                        </li>
-                    </div>
-                    <div class="pa">
-                        <h4 class="to">อาชีพที่สามารถประกอบได้หลังสำเร็จการศึกษา</h4>
-                        <li type="square">
-                            ครู อาจารย์
-                        </li>
-                        <li type="square">
-                            นักวิชาการคอมพิวเตอร์
-                        </li>
-                        <li type="square">
-                            บุคลากรทางการศึกษา
-                        </li>
-                        <li type="square">
-                            นักวิชาการศึกษา
-                        </li>
-                        <li type="square">
-                            นักวิเคราะห์และออกแบบคอมพิวเตอร์
-                        </li>
-                        <li type="square">
-                            นักพัฒนาเว็บไซต์
-                        </li>
-                        <li type="square">
-                            ผู้ดูแลระบบสารสนเทศ
-                        </li>
-                    </div>
-                    <hr>
-                    <div class="text-center k">
-                        <a href="http://www.academic.cmru.ac.th/web_curr58/pdf2562/ComEdu2562.pdf" target="_blank"
-                            class="button-85">รายละเอียดหลักสูตร</a>
-                    </div>
+
+        <!-- Start News -->
+        <div class="container">
+            <h2 class="text-center bb">ข่าวประชาสัมพันธ์</h2>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <a href="date_n/30-09-65-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n01.jpg" alt="" width="100%">
+                            <h6 class="hc">ประชาสัมพันธ์กิจกรรม …”Sci – Tech CMRU Education Expo 2023″…</h6>
+                            <br><br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="date_n/10-09-64-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n02.jpg" alt="" width="100%">
+                            <h6 class="hc">ภาควิชาคอมพิวเตอร์ขอแสดงความยินดีกับผู้ได้รับการคัดเลือกเป็นศิษย์เก่าดีเด่น
+                            </h6>
+                            <br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 10 กันยายน 2564 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="date_n/30-03-64-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n03.jpg" alt="" width="100%">
+                            <h6 class="hc">อบรบเชิงปฏิบัติการหลักสูตรการตลาดออนไลน์ลำไย ให้กับ สปก.ที่ดิน ลำพูน</h6>
+                            <br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 มีนาคม 2564 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="date_n/23-02-64-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n04.jpg" alt="" width="100%">
+                            <h6 class="hc">ภาควิชาคอมพิวเตอร์จัดโครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่ 21</h6>
+                            <br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 23 กุมภาพันธ์ 2564 </p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- End timeline -->
+            <div class="row">
+                <div class="col">
+                    <a href="date_n/07-01-64-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n05.jpg" alt="" width="100%">
+                            <h6 class="hc">สมัครด่วน TCAS รอบที่ 2 รอบ QUOTA 1 มี.ค.-20 เม.ย. 64
+                                มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
+                            <br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 7 มกราคม 2564 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="date_n/04-11-63-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n06.jpg" alt="" width="100%">
+                            <h6 class="hc">สมัครด่วน TCAS รอบที่ 1 รอบ Portfolio มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
+                            <br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 4 พฤศจิกายน 2563 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="date_n/05-11-62-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n07.png" alt="" width="100%">
+                            <h6 class="hc">ขอเชิญเข้าประชุมการศึกษาอิสระฯ ภาคเรียนที่ 2/2562 วันที่ 8 พ.ย. 2562</h6>
+                            <br><br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 5 พฤศจิกายน 2562 </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="date_n/11-04-62-01.html">
+                        <div class="container c2">
+                            <img class="imgg" src="img/news/n08.jpg" alt="" width="100%">
+                            <h6 class="hc">ขอเชิญอาจารย์ และ นักศึกษา
+                                เข้าร่วมอบรมเชิงปฏิบัติการด้านการใช้งานระบบการเรียนการสอนออนไลน์</h6>
+                            <br>
+                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 11 เมษายน 2562 </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End News -->
+
 
         <!-- Start Footer-->
         <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
@@ -496,7 +556,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
-
 </body>
 
 </html>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
+    <link rel="stylesheet" href="about/sty.css">
 
     <link rel="stylesheet" href="buttons.css">
     <!-- Favicon -->
@@ -158,9 +159,10 @@
 
         .c4 {
             width: 200px;
-            height: 300px;
+            height: 200px;
             border-radius: 20px;
             margin: 20px auto 20px auto;
+            filter: drop-shadow(0 0 20px #ffffff);
         }
 
 
@@ -173,7 +175,7 @@
         }
 
         .out1 {
-            background-color: #0f0f0f;
+            background-color: #048DE8;
             border-radius: 50%;
             height: 50%;
             width: 50%;
@@ -181,7 +183,7 @@
         }
 
         .out2 {
-            background-color: #EDC607;
+            background-color: #259F5B;
             border-radius: 50%;
             height: 50%;
             width: 50%;
@@ -189,7 +191,7 @@
         }
 
         .out3 {
-            background-color: #E84D76;
+            background-color: #EDC607;
             border-radius: 50%;
             height: 50%;
             width: 50%;
@@ -197,7 +199,7 @@
         }
 
         .out4 {
-            background-color: #048DE8;
+            background-color: #E84D76;
             border-radius: 50%;
             height: 50%;
             width: 50%;
@@ -207,6 +209,14 @@
         .out5 {
             background-color: #048DE8;
             border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out6 {
+            background-color: #3EC387;
+            border-radius: 25%;
             height: 50%;
             width: 50%;
             margin: 10px auto;
@@ -263,6 +273,32 @@
 
         .foot {
             color: #3EC387;
+        }
+        li {
+            position: relative;
+            display: block;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: #3EC387;
+        }
+        li:hover {
+            color: #ffffff;
+        }
+        li:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
     </style>
 </head>
@@ -324,9 +360,12 @@
                         <li class="dropdown t1">
                             <a class="dropbtn">อื่นๆ</a>
                             <div class="dropdown-content">
-                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/"><i class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
-                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/"><i class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
-                                <a target="_blank" href="https://www.istudy.cmru.ac.th/"><i class='bx bxl-redux'></i> การศึกษาอิสระด้านคอมฯ</a>
+                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/"><i
+                                        class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
+                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/"><i
+                                        class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
+                                <a target="_blank" href="https://www.istudy.cmru.ac.th/"><i class='bx bxl-redux'></i>
+                                    การศึกษาอิสระด้านคอมฯ</a>
                             </div>
                         </li>
                     </ul>
@@ -395,655 +434,741 @@
         <!-- End Carousel -->
 
         <!-- Start link out -->
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <a href="#">
-                        <div class="container c1">
-                            <div class="out1"><i class='bx bxs-bank bx-tada ico' style="color:#ffffff;"></i></div>
-                            <h3>CMRU</h3>
-                            <p>มหาวิทยาลัยราชภัฏเชียงใหม่</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#">
-                        <div class="container c1">
-                            <div class="out2"><i class='bx bx-atom bx-tada ico' style='color:#ffffff'></i></div>
-                            <h3>SCIENCE</h3>
-                            <p>คณะวิทยาศาสตร์และเทคโนโลยี</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#">
-                        <div class="container c1">
-                            <div class="out3"><i class='bx bx-code-alt bx-tada ico' style='color:#ffffff'></i></div>
-                            <h3>ISTUDY</h3>
-                            <p>ระบบค้นคว้าอิสระด้านคอมพิวเตอร์</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#">
-                        <div class="container c1">
-                            <div class="out4"><i class='bx bxs-graduation bx-tada ico' style='color:#ffffff'></i></div>
-                            <h3>COMED</h3>
-                            <p>ระบบฝึกประสบการณ์วิชาชีพครู</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#">
-                        <div class="container c1">
-                            <div class="out5"><i class='bx bx-briefcase-alt bx-tada ico' style='color:#ffffff'></i>
+        <section class="gradient-custom-5">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <a target="_blank"
+                            href="https://dmic.cmru.ac.th/maincmru/new_scicheck/index?fbclid=IwAR3NfFHRaW-a7Rd9bhgHcbiJ3JVLZRuPI9M2St-rZVKGJDyZqhUl9UG29JQ">
+                            <div class="container c1">
+                                <div class="out1"><i class='bx bxs-user-check bx-tada ico' style='color:#ffffff'></i>
+                                </div>
+                                <h3>SCI CHECK</h3>
+                                <p>( สำหรับ Activity & Freshy )</p>
                             </div>
-                            <h3>INTERNSHIP</h3>
-                            <p>เตรียม/ฝึกประสบการณ์วิชาชีพ</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <!-- End link out -->
-
-        <!-- Start Contact -->
-        <div class="container text-center">
-            <h2 class="bb">ติดต่อภาควิชาคอมพิวเตอร์</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="F">
-                        <iframe
-                            style="border-radius: 15px;" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                            width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="L">
-                        <img src="img/LineGroupCom.jpg" alt="" width="90%">
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <!-- End Contact -->
-
-        <!-- Start News -->
-        <div class="container">
-            <h2 class="text-center bb">ข่าวประชาสัมพันธ์</h2>
-            <div class="row">
-                <div class="col">
-                    <a href="date_n/30-09-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n01.jpg" alt="" width="100%">
-                            <h6 class="hc">ประชาสัมพันธ์กิจกรรม …”Sci – Tech CMRU Education Expo 2023″…</h6>
-                            <br><br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_n/10-09-64-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n02.jpg" alt="" width="100%">
-                            <h6 class="hc">ภาควิชาคอมพิวเตอร์ขอแสดงความยินดีกับผู้ได้รับการคัดเลือกเป็นศิษย์เก่าดีเด่น
-                            </h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 10 กันยายน 2564 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_n/30-03-64-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n03.jpg" alt="" width="100%">
-                            <h6 class="hc">อบรบเชิงปฏิบัติการหลักสูตรการตลาดออนไลน์ลำไย ให้กับ สปก.ที่ดิน ลำพูน</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 มีนาคม 2564 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_n/23-02-64-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n04.jpg" alt="" width="100%">
-                            <h6 class="hc">ภาควิชาคอมพิวเตอร์จัดโครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่ 21</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 23 กุมภาพันธ์ 2564 </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="date_n/07-01-64-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n05.jpg" alt="" width="100%">
-                            <h6 class="hc">สมัครด่วน TCAS รอบที่ 2 รอบ QUOTA 1 มี.ค.-20 เม.ย. 64
-                                มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 7 มกราคม 2564 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_n/04-11-63-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n06.jpg" alt="" width="100%">
-                            <h6 class="hc">สมัครด่วน TCAS รอบที่ 1 รอบ Portfolio มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 4 พฤศจิกายน 2563 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_n/05-11-62-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n07.png" alt="" width="100%">
-                            <h6 class="hc">ขอเชิญเข้าประชุมการศึกษาอิสระฯ ภาคเรียนที่ 2/2562 วันที่ 8 พ.ย. 2562</h6>
-                            <br><br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 5 พฤศจิกายน 2562 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_n/11-04-62-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/news/n08.jpg" alt="" width="100%">
-                            <h6 class="hc">ขอเชิญอาจารย์ และ นักศึกษา
-                                เข้าร่วมอบรมเชิงปฏิบัติการด้านการใช้งานระบบการเรียนการสอนออนไลน์</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 11 เมษายน 2562 </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="text-center k">
-                <a href="all_news.html" class="button-85">ข่าวประชาสัมพันธ์ทั้งหมด</a>
-            </div>
-            <hr>
-        </div>
-        <!-- End News -->
-
-        <!-- Start Activity -->
-        <div class="container">
-            <h2 class="text-center bb">กิจกรรมภาควิชาคอมพิวเตอร์</h2>
-            <div class="row">
-                <div class="col">
-                    <a href="date_a/01-02-66-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a01.jpg" alt="" width="100%">
-                            <h6 class="hc">กีฬาพี่น้องสัมพันธ์ภาควิชาคอมพิวเตอร์ ประจำปี 2566</h6>
-                            <br><br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 1 กุมภาพันธ์ 2566 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_a/28-10-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a02.jpg" alt="" width="100%">
-                            <h6 class="hc">โครงการค่ายเยาวชนคนดิจิทัล สำหรับนักเรียนโรงเรียนส่วนบุญโญปถัมภ์ จ.ลำพูน</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 28 ตุลาคม 2565 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_a/30-09-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a03.jpg" alt="" width="100%">
-                            <h6 class="hc">โครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่ 21 (เพิ่มพูนทักษะวิชาการ)
-                                ภาควิชาคอมพิวเตอร์</h6>
-                            <br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_a/30-09-65-02.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a04.jpg" alt="" width="100%">
-                            <h6 class="hc">กิจกรรมไหว้ครูภาควิชาคอมพิวเตอร์</h6>
-                            <br><br><br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565 </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="date_a/24-08-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a05.jpg" alt="" width="100%">
-                            <h6 class="hc">กิจกรรม การแข่งขัน ROV E-Sport (ระดับมัธยมศึกษาตอนปลาย) ภาควิชาคอมพิวเตอร์
-                                ในงานสัปดาห์วิทยาศาสตร์ </h6>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 24 สิงหาคม 2565 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_a/18-08-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a06.jpg" alt="" width="100%">
-                            <h6 class="hc">ภาควิชาคอมพิวเตอร์แสดงความยินดีกับศิษย์เก่าและศิษย์ปัจจุบัน
-                                ที่เข้ารับรางวัลเนื่องในสัปดาห์วิทยาศาสตร์ ปี พ.ศ. 2565</h6>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 18 สิงหาคม 2565 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_a/08-08-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a07.jpg" alt="" width="100%">
-                            <h6 class="hc">โครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม
-                                กิจกรรมอบรมการพัฒนาระบบ
-                                Smart Farm ด้วย Arduino board </h6>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 8 สิงหาคม 2565 </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="date_a/06-08-65-01.html">
-                        <div class="container c2">
-                            <img class="imgg" src="img/atvt/a08.png" alt="" width="100%">
-                            <h6 class="hc">กิจกรรมอบรมการพัฒนาเว็บแอปพลิเคชั้นขั้นสูง</h6>
-                            <br><br>
-                            <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 6 สิงหาคม 2565 </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="text-center k">
-                <a href="" class="button-85">ข่าวประชาสัมพันธ์ทั้งหมด</a>
-            </div>
-            <hr>
-        </div>
-        <!-- End Activity -->
-
-
-        <!-- Start หลักสูตร-->
-        <div class="container text-center">
-            <h2 class="text-center bb">หลักสูตรที่เปิดสอนในภาควิชาคอมพิวเตอร์</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="container c4 ii">
-                        <a href="#" style="border: none;"><img src="img/it.png" style="width:100%"></a>
-                    </div>
-                    <h6 class="hc">สาขาวิชา เทคโนโลยีสารสนเทศ</h6>
-                </div>
-
-                <div class="col">
-                    <div class="container c4 ii">
-                        <a href="#" style="border: none;"><img src="img/comsci.png" style="width:100%"></a>
-                    </div>
-                    <h6 class="hc">สาขาวิชา วิทยาการคอมพิวเตอร์</h6>
-                </div>
-
-                <div class="col">
-                    <div class="container c4 ii">
-                        <a href="#" style="border: none;"><img src="img/come.png" style="width:100%"></a>
-                    </div>
-                    <h6 class="hc">สาขาวิชา คอมพิวเตอร์ศึกษา</h6>
-                </div>
-
-                <div class="col">
-                    <div class="container c4 ii">
-                        <a href="#" style="border: none;"><img src="img/web.png" style="width:100%"></a>
-                    </div>
-                    <h6 class="hc">สาขาวิชา เทคโนโลยีเว็บ</h6>
-                </div>
-
-                <div class="col">
-                    <div class="container c4 ii">
-                        <a href="#" style="border: none;"><img src="img/lcom.png" style="width:100%"></a>
-                    </div>
-                    <h6 class="hc">สาขาวิชา นวัตกรรมดิจิทัล</h6>
-                </div>
-
-            </div>
-            <hr>
-        </div>
-        <!-- End หลักสูตร -->
-
-
-        <!-- Start Contact -->
-        <div class="container text-center">
-            <h2 class="text-center bb">CONTACT VARIOUS OFFICES</h2>
-            <div class="row">
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal01">
-                            <img src="img/logo.png" style="width:100%">
-                        </button>
-                    </div>
-                    <h6 class="hc">มหาวิทยาลัยราชภัฏเชียงใหม่</h6>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal01" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">มหาวิทยาลัยราชภัฏเชียงใหม่</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                    <div class="col">
+                        <a target="_blank" href="https://www.network.cmru.ac.th/system/?cmru_mod=student_login">
+                            <div class="container c1">
+                                <div class="out2"><i class='bx bx-wifi bx-tada ico' style='color:#ffffff'></i>
+                                </div>
+                                <h3>NETWORK</h3>
+                                <p>( ขอใช้ระบบสารสนเทศ เช่น WIFI )</p>
                             </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 202 ถ.ช้างเผือก
-                                ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300 <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5396
-                                (โทรศัพท์) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5319
-                                (โทรสาร)
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a target="_blank" href="https://tcas.cmru.ac.th/">
+                            <div class="container c1">
+                                <div class="out3"><i class='bx bxs-graduation bx-tada ico' style='color:#ffffff'></i>
+                                </div>
+                                <h3>TCAS CMRU</h3>
+                                <p>( สมัครเรียนเรียน Click Here! )</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/">
+                            <div class="container c1">
+                                <div class="out4"><i class='bx bx-chalkboard bx-tada ico' style='color:#ffffff'></i>
+                                </div>
+                                <h3>COMED</h3>
+                                <p>( ระบบฝึกประสบการณ์วิชาชีพครู )</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/">
+                            <div class="container c1">
+                                <div class="out5"><i class='bx bx-briefcase-alt bx-tada ico' style='color:#ffffff'></i>
+                                </div>
+                                <h3>INTERNSHIP</h3>
+                                <p>( เตรียม/ฝึกประสบการณ์วิชาชีพ )</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- End link out -->
+
+            <!-- Start Contact -->
+            <div class="container text-center">
+                <h2 class="bb">Communication Department of Computer CMRU</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="F">
+                            <iframe style="border-radius: 15px;"
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER&tabs=timeline&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                                width="340" height="130" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="L">
+                            <img src="img/LineGroupCom.jpg" alt="" width="90%">
+                        </div>
+                    </div>
+                    <div class="col l">
+                        <a target="_blank" href="SocialComputerCMRU.html">
+                            <h2 style="position: absolute; margin: 60px auto; padding: 0 0 0 40px;">NEW!</h2>
+                            <div class="container L ii">
+                                <div class="out6 ii"><img src="img/lcom.png" alt="" width="80%">
+                                </div>
+                            </div>
+                            <h3 style="position: absolute; margin: -100px auto; padding: 0 0 0 60px; ">Social Computer
+                                CMRU</h3>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- End Contact -->
+
+            <!-- Start News -->
+            <div class="container">
+                <h2 class="text-center bb">ข่าวประชาสัมพันธ์</h2>
+                <div class="row">
+                    <div class="col">
+                        <a href="date_n/30-09-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n01.jpg" alt="" width="100%">
+                                <h6 class="hc">ประชาสัมพันธ์กิจกรรม …”Sci – Tech CMRU Education Expo 2023″…</h6>
+                                <br><br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_n/10-09-64-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n02.jpg" alt="" width="100%">
+                                <h6 class="hc">
+                                    ภาควิชาคอมพิวเตอร์ขอแสดงความยินดีกับผู้ได้รับการคัดเลือกเป็นศิษย์เก่าดีเด่น
+                                </h6>
                                 <br>
-                                <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : saraban@cmru.ac.th
-                                <hr>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
-                                    <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
-                                        Website</a>
-                                </div>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 10 กันยายน 2564
+                                </p>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_n/30-03-64-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n03.jpg" alt="" width="100%">
+                                <h6 class="hc">อบรบเชิงปฏิบัติการหลักสูตรการตลาดออนไลน์ลำไย ให้กับ สปก.ที่ดิน ลำพูน
+                                </h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 มีนาคม 2564
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_n/23-02-64-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n04.jpg" alt="" width="100%">
+                                <h6 class="hc">ภาควิชาคอมพิวเตอร์จัดโครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่
+                                    21</h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 23 กุมภาพันธ์
+                                    2564 </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal02">
-                            <img src="img/lsci.png" style="width:100%">
-                        </button>
+                <div class="row">
+                    <div class="col">
+                        <a href="date_n/07-01-64-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n05.jpg" alt="" width="100%">
+                                <h6 class="hc">สมัครด่วน TCAS รอบที่ 2 รอบ QUOTA 1 มี.ค.-20 เม.ย. 64
+                                    มหาวิทยาลัยราชภัฏเชียงใหม่!!!</h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 7 มกราคม 2564
+                                </p>
+                            </div>
+                        </a>
                     </div>
-                    <h6 class="hc">คณะวิทยาศาสตร์และเทคโนโลยี</h6>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal02" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">คณะวิทยาศาสตร์และเทคโนโลยี</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                    <div class="col">
+                        <a href="date_n/04-11-63-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n06.jpg" alt="" width="100%">
+                                <h6 class="hc">สมัครด่วน TCAS รอบที่ 1 รอบ Portfolio มหาวิทยาลัยราชภัฏเชียงใหม่!!!
+                                </h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 4 พฤศจิกายน
+                                    2563 </p>
                             </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : อาคารบริหารงานกลาง (SCI1)
-                                คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่ เลขที่ 180 ม.7 ต.ขี้เหล็ก อ.แม่ริม
-                                จ.เชียงใหม่ 50180 <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 062-3104909
-                                (สำนักงานคณบดี) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 061-2653344
-                                (ฝ่ายวิชาการ) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 081-7093043
-                                (ฝ่ายกิจการนักศึกษา) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 065-3760535
-                                (ศูนย์วิทยาศาสตร์) <br>
-                                <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : saraban_sci@cmru.ac.th
-                                (งานสารบรรณ) <br>
-                                <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : contact_sci@cmru.ac.th
-                                (ติดต่อสอบถาม) <br>
-                                <hr>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
-                                    <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
-                                        Website</a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal03">
-                            <img src="img/lreg.png" style="width:100%">
-                        </button>
+                    <div class="col">
+                        <a href="date_n/05-11-62-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n07.png" alt="" width="100%">
+                                <h6 class="hc">ขอเชิญเข้าประชุมการศึกษาอิสระฯ ภาคเรียนที่ 2/2562 วันที่ 8 พ.ย. 2562
+                                </h6>
+                                <br><br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 5 พฤศจิกายน
+                                    2562 </p>
+                            </div>
+                        </a>
                     </div>
-                    <h6 class="hc">สำนักทะเบียนและประมวลผล</h6>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal03" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">สำนักทะเบียนและประมวลผล</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                    <div class="col">
+                        <a href="date_n/11-04-62-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/news/n08.jpg" alt="" width="100%">
+                                <h6 class="hc">ขอเชิญอาจารย์ และ นักศึกษา
+                                    เข้าร่วมอบรมเชิงปฏิบัติการด้านการใช้งานระบบการเรียนการสอนออนไลน์</h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 11 เมษายน 2562
+                                </p>
                             </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : สำนักทะเบียนและประมวลผล
-                                มหาวิทยาลัยราชภัฏเชียงใหม่ 202 ถ.ช้างเผือก ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300 <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5960 ถึง
-                                80
-                                (เบอร์โทรศัพท์) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5970
-                                (เบอร์โทรสาร) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 09-2802-1812
-                                (เบอร์มือถือ) <br>
-                                <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : registrar@cmru.ac.th <br>
-                                <hr>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
-                                    <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
-                                        Website</a>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal04">
-                            <img src="img/ldgt.png" style="width:100%">
-                        </button>
-                    </div>
-                    <h6 class="hc">สำนักดิจิทัลเพื่อการศึกษา</h6>
+                <div class="text-center k">
+                    <a href="all_news.html" class="button-85">ข่าวประชาสัมพันธ์ทั้งหมด</a>
                 </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal04" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">สำนักดิจิทัลเพื่อการศึกษา</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : 202 ถ.ช้างเผือก
-                                ต.ช้างเผือก
-                                อ.เมือง จ.เชียงใหม่ <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5933
-                                (เบอร์โทรศัพท์) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5934
-                                (เบอร์โทรสาร) <br>
-                                <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : admin@cmru.ac.th <br>
-                                <hr>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
-                                    <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
-                                        Website</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                <hr>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal06">
-                            <img src="img/latvt.png" style="width:100%">
-                        </button>
-                    </div>
-                    <h6 class="hc">ระบบบันทึกกิจกรรมนักศึกษา</h6>
-                </div>
+            <!-- End News -->
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal06" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">ระบบบันทึกกิจกรรมนักศึกษา</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+            <!-- Start Activity -->
+            <div class="container">
+                <h2 class="text-center bb">กิจกรรมภาควิชาคอมพิวเตอร์</h2>
+                <div class="row">
+                    <div class="col">
+                        <a href="date_a/01-02-66-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a01.jpg" alt="" width="100%">
+                                <h6 class="hc">กีฬาพี่น้องสัมพันธ์ภาควิชาคอมพิวเตอร์ ประจำปี 2566</h6>
+                                <br><br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 1 กุมภาพันธ์
+                                    2566 </p>
                             </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 053-885699
-                                (เบอร์โทรศัพท์) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 053-885443
-                                (เบอร์โทรศัพท์) <br>
-                                <hr>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_a/28-10-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a02.jpg" alt="" width="100%">
+                                <h6 class="hc">โครงการค่ายเยาวชนคนดิจิทัล สำหรับนักเรียนโรงเรียนส่วนบุญโญปถัมภ์
+                                    จ.ลำพูน</h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 28 ตุลาคม 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_a/30-09-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a03.jpg" alt="" width="100%">
+                                <h6 class="hc">โครงการเพิ่มพูนทักษะวิชาการและทักษะแห่งศตวรรษที่ 21
+                                    (เพิ่มพูนทักษะวิชาการ)
+                                    ภาควิชาคอมพิวเตอร์</h6>
+                                <br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_a/30-09-65-02.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a04.jpg" alt="" width="100%">
+                                <h6 class="hc">กิจกรรมไหว้ครูภาควิชาคอมพิวเตอร์</h6>
+                                <br><br><br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 30 กันยายน 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="date_a/24-08-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a05.jpg" alt="" width="100%">
+                                <h6 class="hc">กิจกรรม การแข่งขัน ROV E-Sport (ระดับมัธยมศึกษาตอนปลาย)
+                                    ภาควิชาคอมพิวเตอร์
+                                    ในงานสัปดาห์วิทยาศาสตร์ </h6>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 24 สิงหาคม 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_a/18-08-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a06.jpg" alt="" width="100%">
+                                <h6 class="hc">ภาควิชาคอมพิวเตอร์แสดงความยินดีกับศิษย์เก่าและศิษย์ปัจจุบัน
+                                    ที่เข้ารับรางวัลเนื่องในสัปดาห์วิทยาศาสตร์ ปี พ.ศ. 2565</h6>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 18 สิงหาคม 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_a/08-08-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a07.jpg" alt="" width="100%">
+                                <h6 class="hc">โครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม
+                                    กิจกรรมอบรมการพัฒนาระบบ
+                                    Smart Farm ด้วย Arduino board </h6>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 8 สิงหาคม 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="date_a/06-08-65-01.html">
+                            <div class="container c2">
+                                <img class="imgg" src="img/atvt/a08.png" alt="" width="100%">
+                                <h6 class="hc">กิจกรรมอบรมการพัฒนาเว็บแอปพลิเคชั้นขั้นสูง</h6>
+                                <br><br>
+                                <p class="end"><i class='bx bxs-calendar' style='color:#3EC387'></i> 6 สิงหาคม 2565
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center k">
+                    <a href="" class="button-85">ข่าวประชาสัมพันธ์ทั้งหมด</a>
+                </div>
+                <hr>
+            </div>
+            <!-- End Activity -->
+
+
+            <!-- Start หลักสูตร-->
+            <div class="container text-center">
+                <h2 class="text-center bb">หลักสูตรที่เปิดสอนในภาควิชาคอมพิวเตอร์</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="container c4 ii">
+                            <a href="#" style="border: none;"><img src="img/it.png" style="width:100%"></a>
+                        </div>
+                        <h6 class="hc">สาขาวิชา เทคโนโลยีสารสนเทศ</h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="container c4 ii">
+                            <a href="#" style="border: none;"><img src="img/comsci.png" style="width:100%"></a>
+                        </div>
+                        <h6 class="hc">สาขาวิชา วิทยาการคอมพิวเตอร์</h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="container c4 ii">
+                            <a href="#" style="border: none;"><img src="img/come.png" style="width:100%"></a>
+                        </div>
+                        <h6 class="hc">สาขาวิชา คอมพิวเตอร์ศึกษา</h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="container c4 ii">
+                            <a href="#" style="border: none;"><img src="img/web.png" style="width:100%"></a>
+                        </div>
+                        <h6 class="hc">สาขาวิชา เทคโนโลยีเว็บ</h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="container c4 ii">
+                            <a href="#" style="border: none;"><img src="img/lcom.png" style="width:100%"></a>
+                        </div>
+                        <h6 class="hc">สาขาวิชา นวัตกรรมดิจิทัล</h6>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+            <!-- End หลักสูตร -->
+
+
+            <!-- Start Contact -->
+            <div class="container text-center">
+                <h2 class="text-center bb">CONTACT VARIOUS OFFICES</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal01">
+                                <img src="img/logo.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">มหาวิทยาลัยราชภัฏเชียงใหม่</h6>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal01" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">
+                                        มหาวิทยาลัยราชภัฏเชียงใหม่</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 202
+                                    ถ.ช้างเผือก
+                                    ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300 <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0-5388-5396
+                                    (โทรศัพท์) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0-5388-5319
+                                    (โทรสาร)
+                                    <br>
+                                    <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> :
+                                    saraban@cmru.ac.th
+                                    <hr>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                        <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                            Website</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal07">
-                            <img src="img/lms.png" style="width:100%">
-                        </button>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal02">
+                                <img src="img/lsci.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">คณะวิทยาศาสตร์และเทคโนโลยี</h6>
                     </div>
-                    <h6 class="hc">กองทุนเงินให้กู้ยืมเพื่อการศึกษา</h6>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal07" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">กองทุนเงินให้กู้ยืมเพื่อการศึกษา
-                                </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 062-3104900
-                                (เบอร์โทรศัพท์) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 053-885432
-                                (เบอร์โทรศัพท์) <br>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal02" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">
+                                        คณะวิทยาศาสตร์และเทคโนโลยี</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : อาคารบริหารงานกลาง
+                                    (SCI1)
+                                    คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่ เลขที่ 180 ม.7 ต.ขี้เหล็ก
+                                    อ.แม่ริม
+                                    จ.เชียงใหม่ 50180 <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    062-3104909
+                                    (สำนักงานคณบดี) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    061-2653344
+                                    (ฝ่ายวิชาการ) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    081-7093043
+                                    (ฝ่ายกิจการนักศึกษา) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    065-3760535
+                                    (ศูนย์วิทยาศาสตร์) <br>
+                                    <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> :
+                                    saraban_sci@cmru.ac.th
+                                    (งานสารบรรณ) <br>
+                                    <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> :
+                                    contact_sci@cmru.ac.th
+                                    (ติดต่อสอบถาม) <br>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                        <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                            Website</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal08">
-                            <img src="img/lssd.png" style="width:100%">
-                        </button>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal03">
+                                <img src="img/lreg.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">สำนักทะเบียนและประมวลผล</h6>
                     </div>
-                    <h6 class="hc">กองพัฒนานักศึกษา</h6>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal08" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">กองพัฒนานักศึกษา</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0623104914
-                                (เบอร์โทรศัพท์) <br>
-                                <i class='bx bxs-message-rounded-dots bx-tada' style='color:#3EC387'></i> : 0623104914
-                                (ID
-                                Line) <br>
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
-                                    <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
-                                        Website</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal03" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">สำนักทะเบียนและประมวลผล
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> :
+                                    สำนักทะเบียนและประมวลผล
+                                    มหาวิทยาลัยราชภัฏเชียงใหม่ 202 ถ.ช้างเผือก ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300
+                                    <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0-5388-5960 ถึง
+                                    80
+                                    (เบอร์โทรศัพท์) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0-5388-5970
+                                    (เบอร์โทรสาร) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    09-2802-1812
+                                    (เบอร์มือถือ) <br>
+                                    <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> :
+                                    registrar@cmru.ac.th <br>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                        <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                            Website</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal09">
-                            <img src="img/lst.png" style="width:100%">
-                        </button>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal04">
+                                <img src="img/ldgt.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">สำนักดิจิทัลเพื่อการศึกษา</h6>
                     </div>
-                    <h6 class="hc">ST - CMRU</h6>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal09" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">ST - CMRU</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal04" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">สำนักดิจิทัลเพื่อการศึกษา
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : 202 ถ.ช้างเผือก
+                                    ต.ช้างเผือก
+                                    อ.เมือง จ.เชียงใหม่ <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0-5388-5933
+                                    (เบอร์โทรศัพท์) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0-5388-5934
+                                    (เบอร์โทรสาร) <br>
+                                    <i class='bx bx-envelope bx-tada' style='color:#3EC387'></i> : admin@cmru.ac.th
+                                    <br>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                        <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                            Website</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="container c3 ii">
-                        <button type="button" style="border: none;" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal10">
-                            <img src="img/lnct.png" style="width:90%">
-                        </button>
-                    </div>
-                    <h6 class="hc">หน่วยนักศึกษาวิชาทหาร</h6>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 nn" id="exampleModalLabel">หน่วยนักศึกษาวิชาทหาร</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal06">
+                                <img src="img/latvt.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">ระบบบันทึกกิจกรรมนักศึกษา</h6>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal06" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">ระบบบันทึกกิจกรรมนักศึกษา
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    053-885699
+                                    (เบอร์โทรศัพท์) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    053-885443
+                                    (เบอร์โทรศัพท์) <br>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-body fm" style="text-align: start;">
-                                <div class="text-center">
-                                    <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> : Pages</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal07">
+                                <img src="img/lms.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">กองทุนเงินให้กู้ยืมเพื่อการศึกษา</h6>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal07" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">
+                                        กองทุนเงินให้กู้ยืมเพื่อการศึกษา
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    062-3104900
+                                    (เบอร์โทรศัพท์) <br>
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    053-885432
+                                    (เบอร์โทรศัพท์) <br>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal08">
+                                <img src="img/lssd.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">กองพัฒนานักศึกษา</h6>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal08" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">กองพัฒนานักศึกษา</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                    0623104914
+                                    (เบอร์โทรศัพท์) <br>
+                                    <i class='bx bxs-message-rounded-dots bx-tada' style='color:#3EC387'></i> :
+                                    0623104914
+                                    (ID
+                                    Line) <br>
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                        <a href="" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                            Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal09">
+                                <img src="img/lst.png" style="width:100%">
+                            </button>
+                        </div>
+                        <h6 class="hc">ST - CMRU</h6>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal09" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">ST - CMRU</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c3 ii">
+                            <button type="button" style="border: none;" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal10">
+                                <img src="img/lnct.png" style="width:90%">
+                            </button>
+                        </div>
+                        <h6 class="hc">หน่วยนักศึกษาวิชาทหาร</h6>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 nn" id="exampleModalLabel">หน่วยนักศึกษาวิชาทหาร
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body fm" style="text-align: start;">
+                                    <div class="text-center">
+                                        <a href="" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                            Pages</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="v" style="padding: 0 0 100px 0;"></div>
+        </section>
         <!-- End Contact -->
-        <br><br>
+
         <!-- Start Footer-->
         <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
             <div class="container">
@@ -1106,7 +1231,7 @@
                                 </li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
                                             class='bx bxs-graduation bx-tada' style='color:#ffffff'></i>
-                                            ฝึกประสบการณ์วิชาชีพครู</a>
+                                        ฝึกประสบการณ์วิชาชีพครู</a>
                                 </li>
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
                                             class='bx bxl-redux bx-spin' style='color:#ffffff'></i>
@@ -1121,7 +1246,8 @@
                                 <h6 class="text-body-secondary">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
                                 </h6><br>
                                 <div class="text-body-secondary">
-                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7 ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
+                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7
+                                        ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
                                         <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
                                         0-5388-5635(โทรศัพท์) <br>
                                         <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :

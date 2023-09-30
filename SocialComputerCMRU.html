@@ -5,61 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
-    <link rel="stylesheet" href="../buttons.css">
 
-    <link rel="stylesheet" href="../about/sty.css">
+    <link rel="stylesheet" href="about/sty.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- CDN CSS links icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script
+        src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_564ff6fbcd6e7c094a7ec1b550ac57"></script>
     <style>
         body {
             background-color: rgb(246, 246, 246);
-        }
-
-        .dropdown {
-            padding: auto 100px;
-        }
-
-        .dropbtn {
-            text-decoration: none;
-            color: #666666;
-            font-size: 14px;
-            border: none;
-        }
-
-        .dropbtn:hover {
-            color: #3EC387;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 250px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 20px;
-        }
-
-        .dropdown-content a {
-            color: #666666;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border-radius: 20px;
-        }
-
-        .dropdown-content a:hover {
-            color: #3EC387;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
 
         .reg {
@@ -109,7 +69,38 @@
         .t1 {
             font-weight: bold;
             color: #666666;
+            margin: 0 20px;
             padding: 2px 12px;
+            font-size: 30px;
+        }
+
+        li {
+            position: relative;
+            display: block;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: #3EC387;
+        }
+
+        li:hover {
+            color: #ffffff;
+        }
+
+        li:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
         .t1:hover {
@@ -174,11 +165,11 @@
         }
 
         .out1 {
-            background-color: #0f0f0f;
+            background-color: #ffffff;
             border-radius: 50%;
             height: 50%;
-            width: 50%;
             margin: 10px auto;
+            border: 4px solid #3EC387;
         }
 
         .out2 {
@@ -230,7 +221,7 @@
 
         .b1 {
             font-weight: bold;
-
+            margin: 20px auto;
         }
 
         .hc {
@@ -248,7 +239,9 @@
         }
 
         .ii {
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .ct {
@@ -271,42 +264,150 @@
         }
 
         .c6 {
-            padding: 20px;
-            border-radius: 50px;
-            margin: 50px auto 70px auto;
-            box-shadow: 5px 10px 8px #888888;
-            background-color: #FFFFFF;
+            width: 700px;
+            border-radius: 10px;
+            margin: 20px auto 10px auto;
+            background-color: #242526;
+            color: #FFFFFF;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c6 a {
+            color: #FFFFFF;
         }
 
         .tcen {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        }
+
+        .like {
+            background-color: rgb(219, 219, 219);
+            width: 25%;
+            border-radius: 50px;
         }
 
         @media screen and (max-width: 480px) {
             .c6 {
-                height: 900px;
+                width: 100%;
             }
 
-            .v {
-                margin-right: 100px;
-            }
-
-            .v1 {
-                margin-top: 50px;
+            .like {
+                width: 50%;
             }
         }
 
         .kk {
-            margin-bottom: 50px;
+            border-radius: 25px;
         }
 
-        .o {
-            color: orange;
-            font-size: 15px;
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -314,12 +415,15 @@
 <body>
     <!-- Start Navbar -->
     <a name="top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg  rounded cc" aria-label="Thirteenth navbar example">
             <div class="container-fluid">
-                <a href="index.html"><img src="../img/logonav.png" alt=""></a>
-                <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
-                    href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
-                    Computer CMRU</a>
+                <a href="index.html"><img src="img/logonav.png" alt=""></a>
+                <div class="h" style="padding: 0 0 0 10px;"></div>
+                <form class="d-flex text-body-secondary" role="search">
+                    <input
+                        style="border-radius: 50px; background-color: #3A3B3C; border: none; color: #FFFFFF;theme-colors: dark;"
+                        class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -330,54 +434,23 @@
                     <a class="navbar-brand col-lg-2 me-0" href="#"></a>
                     <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" aria-current="page" href="../index.html"><i
-                                    class='bx bxs-home'></i> หน้าหลัก</a>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">เกี่ยวกับภาควิชา</a>
-                            <div class="dropdown-content">
-                                <a href="about/history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
-                                <a href="about/vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
-                                <a href="about/vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
-                                <a href="about/staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
-                            </div>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">หลักสูตร</a>
-                            <div class="dropdown-content">
-                                <a href="course/computer-science.html"><i class='bx bx-desktop'></i>
-                                    วิทยาการคอมพิวเตอร์</a>
-                                <a href="course/information-technology.html"><i class='bx bx-wifi'></i>
-                                    เทคโนยีสารสนเทศ</a>
-                                <a href="course/comed-3.html"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
-                                <a href="course/web-programming.html"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
-                                <a href="course/digital.html"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
-                                <a href="course/vdocourse.html"><i class='bx bxs-movie-play'></i>
-                                    วีดิทัศน์แนะนำหลักสูตร</a>
-                            </div>
+                            <a class="nav-link btn t1" aria-current="page" href="index.html"><i
+                                    class='bx bxs-home'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="../all_news.html">ข่าวประชาสัมพันธ์</a>
+                            <a class="nav-link btn  t1" href="#"><i class='bx bx-movie-play'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="../all_activity.html">กิจกรรมของภาควิชา</a>
+                            <a class="nav-link btn  t1" href="#"><i class='bx bx-photo-album'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="#">ติดต่อภาควิชา</a>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">อื่นๆ</a>
-                            <div class="dropdown-content">
-                                <a href="#"><i class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
-                                <a href="#"><i class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
-                                <a href="#"><i class='bx bxl-redux'></i> การศึกษาอิสระด้านคอมฯ</a>
-                            </div>
+                            <a class="nav-link btn t1" href="#"><i class='bx bxs-user-badge'></i></a>
                         </li>
                     </ul>
                     <div class="d-lg-flex col-lg-4 justify-content-lg-end">
                         <a class="button reg" style="vertical-align:middle"
-                            href="https://reg.cmru.ac.th/registrar/home.asp" target="_blank"><span><i
-                                    class='bx bxs-graduation'></i> REG</span></a>
+                            href="https://www.facebook.com/messages/t/369168779769167" target="_blank"><span><i
+                                    class='bx bx-conversation bx-tada' style='color:#ffffff'></i> <b>CHAT</b></span></a>
                     </div>
                 </div>
             </div>
@@ -389,68 +462,37 @@
         <section class="gradient-custom-5">
             <div class="container py-5">
                 <div class="container c6">
-                    <h2 class="text-center bb">กีฬาพี่น้องสัมพันธ์ภาควิชาคอมพิวเตอร์ ประจำปี 2566</h2>
-                    <hr>
-                    <p>Posted on 23 กุมภาพันธ์ 2564</p>
-                    <div class="row">
-                        <div class="col n">
-                            <div class="container">
-                                <h5>เมื่อวันที่ 28 มกราคม พ.ศ. 2566 ภาควิชาคอมพิวเตอร์ ได้ดำเนินการจัดกิจกรรม “กีฬาพี่น้องสัมพันธ์ภาควิชาคอมพิวเตอร์ ประจำปี 2566”<br>
-                                    ให้กับนักศึกษาชั้นปีที่ 1 – 3 ทั้ง 5 หลักสูตร โดยมีวัตถุประสงค์เพื่อสร้างความสามัคคีในหมู่คณะ และเป็นการเชื่อสัมพันธ์อันดีระหว่างรุ่นพี่กับรุ่นน้อง <br>
-                                    และเพื่อให้นักศึกษาภาควิชาคอมพิวเตอร์ เป็นคนที่รู้จักการให้อภัย รู้แพ้ รู้ชนะ รู้อภัย และเป็นการเสริมสร้างสมรรถภาพทางร่างกาย
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.1.jpg"><img src="../img/pnews/6.1.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.2.jpg"><img src="../img/pnews/6.2.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.3.jpg"><img src="../img/pnews/6.3.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.4.jpg"><img src="../img/pnews/6.4.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.5.jpg"><img src="../img/pnews/6.5.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.6.jpg"><img src="../img/pnews/6.6.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.7.jpg"><img src="../img/pnews/6.7.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.8.jpg"><img src="../img/pnews/6.8.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                                <div class="col tcen">
-                                    <a href="../img/pnews/6.9.jpg"><img src="../img/pnews/6.9.jpg" alt="" class="imgg" width="100%"></a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <hr>
-                        <div class="container ii">
-                            <div class="row">
-                                <div class="col v" style="text-align: start;">
-                                    <a class="button-85" href=""><i class='bx bx-chevrons-left bx-fade-right'></i>
-                                        &nbsp;&nbsp; Previous</a>
-                                </div>
-                                <div class="col v1" style="text-align: end;">
-                                    <a class="button-85" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next &nbsp;&nbsp;
-                                        <i class='bx bx-chevrons-right bx-fade-left'></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <img class="out1" src="img/logonav.png" alt="">
+                    <a href=""
+                        style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
+                        CMRU</a>
+                    <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 1 กุมภาพันธ์ 2566</p>
+                    <p>นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา มร.ชม. คว้ารางวัลรองชนะเลิศอันดับ 1 <br>
+                        การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT) <br><br>
+                        📰 ตามที่มหาวิทยาลัยราชภัฏเชียงใหม่ ได้ส่งตัวแทนนักศึกษาร่วมโครงการ
+                        แข่งขันทักษะวิชาการวิชาชีพครูและส่งเสริมศิลปะวัฒนธรรม
+                        ท้องถิ่นซึ่งจัดขึ้นตามข้อตกลงความร่วมมือ (MOU)ตามโครงสร้างเครือข่ายสโมสรนักศึกษาในเขตภาคเหนือ 8
+                        สถาบัน เมื่อวันที่ 29 มกราคม 2566
+                        ณ มหาวิทยาลัยราชภัฏเพชรบูรณ์<br>
+                        🥈ผลการแข่งขันปรากฏว่านายสุกฤษฏิ์ สุธรรมแปง นายธเนศ มนต์น้อย และนางสาวถาวรีย์ ทิวงศ์
+                        นักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา ชั้นปีที่ 3
+                        ได้รับรางวัลรองชนะเลิศอันดับ1 ประเภท การแข่งขันโครงงานและนวัตกรรมคอมพิวเตอร์ (IoT)
+                        จากการเข้าร่วมโครงการแข่งขันทักษะวิชาการวิชาชีพครู
+                        และส่งเสริมศิลปวัฒนธรรมท้องถิ่น กลุ่มมหาวิทยาลัยราชภัฏภาคเหนือ ครั้งที่ 10 โดยมี อ.ดร.พิรุฬห์
+                        แก้วฟุ้งรังษี หัวหน้าภาควิชาคอมพิวเตอร์และ
+                        อ.ประธาน คำจินะ อาจารย์ภาควิชาคอมพิวเตอร์ เป็นผู้ควบคุมทีมทางมหาวิทยาลัย</p>
+                    <img id="myImg" src="img/pnews/14.jpg" class="imgg" alt="ภาควิชาคอมพิวเตอร์ CMRU" width="100%">
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
                     </div>
+                    <hr>
+                    <div class="container like">
+                        <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
+                    </div><br>
                 </div>
+                
             </div>
         </section>
         <!-- End contact -->
@@ -567,6 +609,28 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        </script>
 </body>
 
 </html>

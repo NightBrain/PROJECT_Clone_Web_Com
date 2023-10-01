@@ -254,7 +254,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 100px;
         }
 
         .ct {
@@ -353,8 +352,105 @@
         #more7 {
             display: none;
         }
+
         #more8 {
             display: none;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .myImg {
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+            margin-top: 70px;
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* 100% Image Width on Smaller Screens */
@@ -436,18 +532,12 @@
                     แก้วฟุ้งรังษี หัวหน้าภาควิชาคอมพิวเตอร์และ
                     อ.ประธาน คำจินะ อาจารย์ภาควิชาคอมพิวเตอร์ เป็นผู้ควบคุมทีมทางมหาวิทยาลัย</p>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1"
-                    style="border: none;">
-                    <img src="img/pnews/14.jpg" class="imgg" alt="" width="100%">
-                </button>
+                <img id="myImg1" class="myImg" src="img/pnews/14.jpg" alt="" width="100%">
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii ">
-                        <img src="img/pnews/14.jpg" class="imgg mbb" alt="">
-
-                    </div>
+                <!-- The Modal -->
+                <div id="myModal1" class="modal">
+                    <span class="close cs1">&times;</span>
+                    <img class="modal-content" id="img01">
                 </div>
                 <hr>
                 <div class="container like">
@@ -475,18 +565,12 @@
                     #เรียนต่อราชภัฏ #TCAS66 #เรียนคอมพิวเตอร์ #วิทยาการคอมพิวเตอร์ #เทคโนโลยีสารสนเทศ #เทคโนโลยีเว็บ
                     #นวัตกรรมดิจิตอล #คอมพิวเตอร์ศึกษา</p>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2"
-                    style="border: none;">
-                    <img src="img/pnews/35.jpg" class="imgg mbb" alt="" width="100%">
-                </button>
+                <img id="myImg2" class="myImg" src="img/pnews/35.jpg" alt="" width="100%">
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/35.jpg" class="imgg" alt="" width="110%">
-
-                    </div>
+                <!-- The Modal -->
+                <div id="myModal2" class="modal">
+                    <span class="close cs2">&times;</span>
+                    <img class="modal-content" id="img02">
                 </div>
                 <hr>
                 <div class="container like">
@@ -506,19 +590,14 @@
                     ศิษย์เก่าหลักสูตรคอมพิวเตอร์ศึกษา ภาควิชาคอมพิวเตอร์ ได้รับคัดเลือกเป็นศิษย์เก่าดีเด่น
                     มหาวิทยาลัยราชภัฏเชียงใหม่
                     ประจำปี 2562-2564 สาขาวิชาการหรือวิชาชีพ</p>
+
                 <!-- Button trigger modal -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3"
-                    style="border: none;">
-                    <img src="img/pnews/01.jpg" class="imgg" alt="" width="100%">
-                </button>
+                <img id="myImg3" class="myImg" src="img/pnews/01.jpg" alt="" width="100%">
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/01.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <!-- The Modal -->
+                <div id="myModal3" class="modal">
+                    <span class="close cs3">&times;</span>
+                    <img class="modal-content" id="img03">
                 </div>
                 <hr>
                 <div class="container like">
@@ -540,74 +619,49 @@
                     จ.ลำพูน ณ ห้อง 263</p>
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal41"
-                            style="border: none;">
-                            <img src="img/pnews/2.1.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg4" class="myImg imgv" src="img/pnews/2.1.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal42"
-                            style="border: none;">
-                            <img src="img/pnews/2.2.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg5" class="myImg imgv" src="img/pnews/2.2.jpg" alt="" width="100%">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal43"
-                            style="border: none;">
-                            <img src="img/pnews/2.3.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg6" class="myImg" src="img/pnews/2.3.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal44"
-                            style="border: none;">
-                            <img src="img/pnews/2.4.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg7" class="myImg" src="img/pnews/2.4.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal45"
-                            style="border: none;">
-                            <img src="img/pnews/2.5.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg8" class="myImg" src="img/pnews/2.5.jpg" alt="" width="100%">
                     </div>
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal41" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/2.1.jpg" class="imgg mbb" alt="" width="130%">
+                 <!-- Button trigger modal -->
+                 
 
-                    </div>
-                </div>
-                <div class="modal fade" id="exampleModal42" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/2.2.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
-                </div>
-                <div class="modal fade" id="exampleModal43" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/2.3.jpg" class="imgg mbb" alt="" width="130%">
-                    </div>
-                </div>
-                <div class="modal fade" id="exampleModal44" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/2.4.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
-                </div>
-                <div class="modal fade" id="exampleModal45" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/2.5.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
-                </div>
+                 <!-- The Modal -->
+                 <div id="myModal4" class="modal">
+                     <span class="close cs4">&times;</span>
+                     <img class="modal-content" id="img04">
+                 </div>
+                 <div id="myModal5" class="modal">
+                     <span class="close cs5">&times;</span>
+                     <img class="modal-content" id="img05">
+                 </div>
+                 <div id="myModal6" class="modal">
+                     <span class="close cs6">&times;</span>
+                     <img class="modal-content" id="img06">
+                 </div>
+                 <div id="myModal7" class="modal">
+                     <span class="close cs7">&times;</span>
+                     <img class="modal-content" id="img07">
+                 </div>
+                 <div id="myModal8" class="modal">
+                     <span class="close cs8">&times;</span>
+                     <img class="modal-content" id="img08">
+                 </div>
                 <hr>
                 <div class="container like">
                     <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
@@ -627,139 +681,81 @@
                     ในวันเสาร์-อาทิตย์ที่ 13-14 กุมภาพันธ์ 2564 ณ ห้อง INC21</p>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal51"
-                            style="border: none;">
-                            <img src="img/pnews/3.1.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg9" class="myImg imgv" src="img/pnews/3.1.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal52"
-                            style="border: none;">
-                            <img src="img/pnews/3.2.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg10" class="myImg imgv" src="img/pnews/3.2.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal53"
-                            style="border: none;">
-                            <img src="img/pnews/3.3.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg11" class="myImg imgv" src="img/pnews/3.3.jpg" alt="" width="100%">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal54"
-                            style="border: none;">
-                            <img src="img/pnews/3.4.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg12" class="myImg imgv" src="img/pnews/3.4.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal55"
-                            style="border: none;">
-                            <img src="img/pnews/3.5.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg13" class="myImg imgv" src="img/pnews/3.5.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal56"
-                            style="border: none;">
-                            <img src="img/pnews/3.6.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg14" class="myImg imgv" src="img/pnews/3.6.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal57"
-                            style="border: none;">
-                            <img src="img/pnews/3.7.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg15" class="myImg imgv" src="img/pnews/3.7.jpg" alt="" width="100%">
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal58"
-                            style="border: none;">
-                            <img src="img/pnews/3.8.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg16" class="myImg" src="img/pnews/3.8.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal59"
-                            style="border: none;">
-                            <img src="img/pnews/3.9.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg17" class="myImg" src="img/pnews/3.9.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal510"
-                            style="border: none;">
-                            <img src="img/pnews/3.10.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg18" class="myImg" src="img/pnews/3.10.jpg" alt="" width="100%">
                     </div>
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal51" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.1.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal9" class="modal">
+                    <span class="close cs9">&times;</span>
+                    <img class="modal-content" id="img09">
                 </div>
-                <div class="modal fade" id="exampleModal52" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.2.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal10" class="modal">
+                    <span class="close cs10">&times;</span>
+                    <img class="modal-content" id="img010">
                 </div>
-                <div class="modal fade" id="exampleModal53" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.3.jpg" class="imgg mbb" alt="" width="130%">
-                    </div>
+                <div id="myModal11" class="modal">
+                    <span class="close cs11">&times;</span>
+                    <img class="modal-content" id="img011">
                 </div>
-                <div class="modal fade" id="exampleModal54" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.4.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal12" class="modal">
+                    <span class="close cs12">&times;</span>
+                    <img class="modal-content" id="img012">
                 </div>
-                <div class="modal fade" id="exampleModal55" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.5.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal13" class="modal">
+                    <span class="close cs13">&times;</span>
+                    <img class="modal-content" id="img013">
                 </div>
-                <div class="modal fade" id="exampleModal56" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.6.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal14" class="modal">
+                    <span class="close cs14">&times;</span>
+                    <img class="modal-content" id="img014">
                 </div>
-                <div class="modal fade" id="exampleModal57" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.7.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal15" class="modal">
+                    <span class="close cs15">&times;</span>
+                    <img class="modal-content" id="img015">
                 </div>
-                <div class="modal fade" id="exampleModal58" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.8.jpg" class="imgg mbb" alt="" width="130%">
-                    </div>
+                <div id="myModal16" class="modal">
+                    <span class="close cs16">&times;</span>
+                    <img class="modal-content" id="img016">
                 </div>
-                <div class="modal fade" id="exampleModal59" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.9.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal17" class="modal">
+                    <span class="close cs17">&times;</span>
+                    <img class="modal-content" id="img017">
                 </div>
-                <div class="modal fade" id="exampleModal510" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/3.10.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal18" class="modal">
+                    <span class="close cs18">&times;</span>
+                    <img class="modal-content" id="img018">
                 </div>
                 <hr>
                 <div class="container like">
@@ -780,33 +776,21 @@
                     รอบที่ 2 QUOTA ตั้งแต่วันที่ 1 มีนาคม – 20 เมษายน 2564 ตามรายละเอียดด้านล่าง</p>
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal61"
-                            style="border: none;">
-                            <img src="img/pnews/4.1.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg19" class="myImg imgv" src="img/pnews/4.1.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal62"
-                            style="border: none;">
-                            <img src="img/pnews/4.2.jpg" class="imgg" alt="" width="90%">
-                        </button>
+                        <img id="myImg20" class="myImg imgv" src="img/pnews/4.2.jpg" alt="" width="90%">
                     </div>
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal61" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/4.1.jpg" class="imgg mbb" alt="" width="100%">
-
-                    </div>
+                <div id="myModal19" class="modal">
+                    <span class="close cs19">&times;</span>
+                    <img class="modal-content" id="img019">
                 </div>
-                <div class="modal fade" id="exampleModal62" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/4.2.jpg" class="imgg mbb" alt="" width="100%">
-
-                    </div>
+                <div id="myModal20" class="modal">
+                    <span class="close cs20">&times;</span>
+                    <img class="modal-content" id="img020">
                 </div>
                 <hr>
                 <div class="container like">
@@ -928,18 +912,15 @@
                             ที่มา: <a style="color: orange;"
                                 href="http://www.lms.cmru.ac.th/web/index.php?ge=view&gen_lang=130219024650">http://www.lms.cmru.ac.th/web/index.php?ge=view&gen_lang=130219024650</a></span>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal7"
-                            style="border: none;">
-                            <img src="img/pnews/5.jpg" class="imgg imgt" alt="" width="100%">
-                        </button>
+                        <div class="container ii">
+                            <img id="myImg21" class="myImg" src="img/pnews/5.jpg" alt="" width="100%">
+                        </div>
+                        
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog ii ">
-                                <img src="img/pnews/5.jpg" class="imgg mbb" alt="">
-
-                            </div>
+                        <div id="myModal21" class="modal">
+                            <span class="close cs21">&times;</span>
+                            <img class="modal-content" id="img021">
                         </div>
 
                     </p>
@@ -966,126 +947,74 @@
                     และเป็นการเสริมสร้างสมรรถภาพทางร่างกาย</p>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal81"
-                            style="border: none;">
-                            <img src="img/pnews/6.1.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg22" class="myImg imgv" src="img/pnews/6.1.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal82"
-                            style="border: none;">
-                            <img src="img/pnews/6.2.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg23" class="myImg imgv" src="img/pnews/6.2.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal83"
-                            style="border: none;">
-                            <img src="img/pnews/6.3.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg24" class="myImg imgv" src="img/pnews/6.3.jpg" alt="" width="100%">
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal84"
-                            style="border: none;">
-                            <img src="img/pnews/6.4.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg25" class="myImg imgv" src="img/pnews/6.4.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal85"
-                            style="border: none;">
-                            <img src="img/pnews/6.5.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg26" class="myImg imgv" src="img/pnews/6.5.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal86"
-                            style="border: none;">
-                            <img src="img/pnews/6.6.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg27" class="myImg imgv" src="img/pnews/6.6.jpg" alt="" width="100%">
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal87"
-                            style="border: none;">
-                            <img src="img/pnews/6.7.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg28" class="myImg" src="img/pnews/6.7.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal88"
-                            style="border: none;">
-                            <img src="img/pnews/6.8.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg29" class="myImg" src="img/pnews/6.8.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal89"
-                            style="border: none;">
-                            <img src="img/pnews/6.9.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg30" class="myImg" src="img/pnews/6.9.jpg" alt="" width="100%">
                     </div>
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal81" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.1.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal22" class="modal">
+                    <span class="close cs22">&times;</span>
+                    <img class="modal-content" id="img022">
                 </div>
-                <div class="modal fade" id="exampleModal82" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.2.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal23" class="modal">
+                    <span class="close cs23">&times;</span>
+                    <img class="modal-content" id="img023">
                 </div>
-                <div class="modal fade" id="exampleModal83" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.3.jpg" class="imgg mbb" alt="" width="130%">
-                    </div>
+                <div id="myModal24" class="modal">
+                    <span class="close cs24">&times;</span>
+                    <img class="modal-content" id="img024">
                 </div>
-                <div class="modal fade" id="exampleModal84" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.4.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal25" class="modal">
+                    <span class="close cs25">&times;</span>
+                    <img class="modal-content" id="img025">
                 </div>
-                <div class="modal fade" id="exampleModal85" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.5.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal26" class="modal">
+                    <span class="close cs26">&times;</span>
+                    <img class="modal-content" id="img026">
                 </div>
-                <div class="modal fade" id="exampleModal86" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.6.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal27" class="modal">
+                    <span class="close cs27">&times;</span>
+                    <img class="modal-content" id="img027">
                 </div>
-                <div class="modal fade" id="exampleModal87" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.7.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal28" class="modal">
+                    <span class="close cs28">&times;</span>
+                    <img class="modal-content" id="img028">
                 </div>
-                <div class="modal fade" id="exampleModal88" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.8.jpg" class="imgg mbb" alt="" width="130%">
-                    </div>
+                <div id="myModal29" class="modal">
+                    <span class="close cs29">&times;</span>
+                    <img class="modal-content" id="img029">
                 </div>
-                <div class="modal fade" id="exampleModal89" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/6.9.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal30" class="modal">
+                    <span class="close cs30">&times;</span>
+                    <img class="modal-content" id="img030">
                 </div>
                 <hr>
                 <div class="container like">
@@ -1115,86 +1044,51 @@
                     อาจารย์ภาควิชาคอมพิวเตอร์ เป็นวิทยาการให้ความรู้ในครั้งนี้</p>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal91"
-                            style="border: none;">
-                            <img src="img/pnews/7.1.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg31" class="myImg imgv" src="img/pnews/7.1.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal92"
-                            style="border: none;">
-                            <img src="img/pnews/7.2.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg32" class="myImg imgv" src="img/pnews/7.2.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal93"
-                            style="border: none;">
-                            <img src="img/pnews/7.3.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg33" class="myImg imgv" src="img/pnews/7.3.jpg" alt="" width="100%">
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal94"
-                            style="border: none;">
-                            <img src="img/pnews/7.4.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg34" class="myImg" src="img/pnews/7.4.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal95"
-                            style="border: none;">
-                            <img src="img/pnews/7.5.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg35" class="myImg" src="img/pnews/7.5.jpg" alt="" width="100%">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal96"
-                            style="border: none;">
-                            <img src="img/pnews/7.6.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                        <img id="myImg36" class="myImg" src="img/pnews/7.6.jpg" alt="" width="100%">
                     </div>
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal91" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/7.1.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal31" class="modal">
+                    <span class="close cs31">&times;</span>
+                    <img class="modal-content" id="img031">
                 </div>
-                <div class="modal fade" id="exampleModal92" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/7.2.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal32" class="modal">
+                    <span class="close cs32">&times;</span>
+                    <img class="modal-content" id="img032">
                 </div>
-                <div class="modal fade" id="exampleModal93" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/7.3.jpg" class="imgg mbb" alt="" width="130%">
-                    </div>
+                <div id="myModal33" class="modal">
+                    <span class="close cs33">&times;</span>
+                    <img class="modal-content" id="img033">
                 </div>
-                <div class="modal fade" id="exampleModal94" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/7.4.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal34" class="modal">
+                    <span class="close cs34">&times;</span>
+                    <img class="modal-content" id="img034">
                 </div>
-                <div class="modal fade" id="exampleModal95" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/7.5.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal35" class="modal">
+                    <span class="close cs35">&times;</span>
+                    <img class="modal-content" id="img035">
                 </div>
-                <div class="modal fade" id="exampleModal96" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/7.6.jpg" class="imgg mbb" alt="" width="130%">
-
-                    </div>
+                <div id="myModal36" class="modal">
+                    <span class="close cs36">&times;</span>
+                    <img class="modal-content" id="img036">
                 </div>
                 <hr>
                 <div class="container like">
@@ -1723,160 +1617,159 @@
 
 
             <div class="container c6">
-                <a name="rd1">
-                    <img class="out1" src="img/logonav.png" alt="">
-                    <a href=""
-                        style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
-                        CMRU</a>
-                    <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 8 สิงหาคม 2565</p>
-                    <p> โครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม
-                        กิจกรรมอบรมการพัฒนาระบบ Smart Farm ด้วย Arduino board วันที่ 6-7 สิงหาคม 2565 <br><br>
+                <img class="out1" src="img/logonav.png" alt="">
+                <a href=""
+                    style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
+                    CMRU</a>
+                <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 8 สิงหาคม 2565</p>
+                <p> โครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม
+                    กิจกรรมอบรมการพัฒนาระบบ Smart Farm ด้วย Arduino board วันที่ 6-7 สิงหาคม 2565 <br><br>
 
-                        เมื่อวันที่ 6 – 7 สิงหาคม 2565 อาจารย์ ดร.พิรุฬห์ แก้วฟุ้งรังษี หัวหน้าภาควิชาคอมพิวเตอร์
-                        คณะวิทยาศาสตร์และเทคโนโลยี
-                        มหาวิทยาลัยราชภัฏเชียงใหม่ พร้อมด้วยคณาจารย์และนักศึกษาภาควิชาคอมพิวเตอร์
-                        จัดโครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม กิจกรรมอบรมการพัฒนาระบบ Smart Farm
-                        ด้วย Arduino board
-                        ให้แก่นักเรียนชั้นมัธยมศึกษาปีที่ 3 และ 4 โรงเรียนนวมินทราชูทิศ พายัพ เชียงใหม่ จำนวน 40 คน
-                        เพื่อให้นักเรียนสามารถนำความรู้ทางด้าน Coding และการใช้งาน Arduino board ไปต่อยอดพัฒนาระบบ Smart
-                        Farm ในชุมชนได้ในอนาคต
-                    </p>
-                    <div class="row text-center">
-                        <div class="col">
-                            <button type="button" class="btn imgv" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal141" style="border: none;">
-                                <img src="img/pnews/12.1.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn imgv" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal142" style="border: none;">
-                                <img src="img/pnews/12.2.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
+                    เมื่อวันที่ 6 – 7 สิงหาคม 2565 อาจารย์ ดร.พิรุฬห์ แก้วฟุ้งรังษี หัวหน้าภาควิชาคอมพิวเตอร์
+                    คณะวิทยาศาสตร์และเทคโนโลยี
+                    มหาวิทยาลัยราชภัฏเชียงใหม่ พร้อมด้วยคณาจารย์และนักศึกษาภาควิชาคอมพิวเตอร์
+                    จัดโครงการบูรณาการการเรียนการสอนกับการบริการวิชาการสู่สังคม กิจกรรมอบรมการพัฒนาระบบ Smart Farm
+                    ด้วย Arduino board
+                    ให้แก่นักเรียนชั้นมัธยมศึกษาปีที่ 3 และ 4 โรงเรียนนวมินทราชูทิศ พายัพ เชียงใหม่ จำนวน 40 คน
+                    เพื่อให้นักเรียนสามารถนำความรู้ทางด้าน Coding และการใช้งาน Arduino board ไปต่อยอดพัฒนาระบบ Smart
+                    Farm ในชุมชนได้ในอนาคต
+                </p>
+                <div class="row text-center">
+                    <div class="col">
+                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal141"
+                            style="border: none;">
+                            <img src="img/pnews/12.1.jpg" class="imgg" alt="" width="100%">
+                        </button>
                     </div>
-                    <div class="row text-center">
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal143"
-                                style="border: none;">
-                                <img src="img/pnews/12.3.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal144"
-                                style="border: none;">
-                                <img src="img/pnews/12.4.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal145"
-                                style="border: none;">
-                                <img src="img/pnews/12.5.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
+                    <div class="col">
+                        <button type="button" class="btn imgv" data-bs-toggle="modal" data-bs-target="#exampleModal142"
+                            style="border: none;">
+                            <img src="img/pnews/12.2.jpg" class="imgg" alt="" width="100%">
+                        </button>
                     </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal143"
+                            style="border: none;">
+                            <img src="img/pnews/12.3.jpg" class="imgg" alt="" width="100%">
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal144"
+                            style="border: none;">
+                            <img src="img/pnews/12.4.jpg" class="imgg" alt="" width="100%">
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal145"
+                            style="border: none;">
+                            <img src="img/pnews/12.5.jpg" class="imgg" alt="" width="100%">
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal141" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/12.1.jpg" class="imgg mbb" alt="" width="130%">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal141" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/12.1.jpg" class="imgg mbb" alt="" width="130%">
 
-                        </div>
                     </div>
-                    <div class="modal fade" id="exampleModal142" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/12.2.jpg" class="imgg mbb" alt="" width="130%">
+                </div>
+                <div class="modal fade" id="exampleModal142" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/12.2.jpg" class="imgg mbb" alt="" width="130%">
 
-                        </div>
                     </div>
-                    <div class="modal fade" id="exampleModal143" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/12.3.jpg" class="imgg mbb" alt="" width="130%">
-                        </div>
+                </div>
+                <div class="modal fade" id="exampleModal143" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/12.3.jpg" class="imgg mbb" alt="" width="130%">
                     </div>
-                    <div class="modal fade" id="exampleModal144" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/12.4.jpg" class="imgg mbb" alt="" width="130%">
+                </div>
+                <div class="modal fade" id="exampleModal144" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/12.4.jpg" class="imgg mbb" alt="" width="130%">
 
-                        </div>
                     </div>
-                    <div class="modal fade" id="exampleModal145" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/12.5.jpg" class="imgg mbb" alt="" width="130%">
+                </div>
+                <div class="modal fade" id="exampleModal145" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/12.5.jpg" class="imgg mbb" alt="" width="130%">
 
-                        </div>
                     </div>
-                    <hr>
-                    <div class="container like">
-                        <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
-                    </div><br>
+                </div>
+                <hr>
+                <div class="container like">
+                    <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
+                </div><br>
             </div>
 
 
             <div class="container c6">
-                <a name="rd1">
-                    <img class="out1" src="img/logonav.png" alt="">
-                    <a href=""
-                        style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
-                        CMRU</a>
-                    <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 6 สิงหาคม 2565</p>
-                    <p> กิจกรรมอบรมการพัฒนาเว็บแอปพลิเคชั้นขั้นสูง<br><br>
 
-                        ภาควิชาคอมพิวเตอร์จัดโครงการการพัฒนาเว็บแอปพลิเคชันขั้นสูงสำหรับนักศึกษาภาควิชาคอมพิวเตอร์และบุคคลทั่วไป
-                        วันเสาร์ที่ 6 สิงหาคม 2565 เวลา 8.00 – 16.30 น. วิทยากรโดย คุณบรรเจิด ประทุมหอม และคณะ จากบริษัท
-                        Wisesoft
-                    </p>
-                    <div class="row text-center">
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal151"
-                                style="border: none;">
-                                <img src="img/pnews/13.1.png" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal152"
-                                style="border: none;">
-                                <img src="img/pnews/13.2.png" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal153"
-                                style="border: none;">
-                                <img src="img/pnews/13.3.png" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                    </div>
+                <img class="out1" src="img/logonav.png" alt="">
+                <a href=""
+                    style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
+                    CMRU</a>
+                <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 6 สิงหาคม 2565</p>
+                <p> กิจกรรมอบรมการพัฒนาเว็บแอปพลิเคชั้นขั้นสูง<br><br>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal151" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/13.1.png" class="imgg mbb" alt="" width="130%">
+                    ภาควิชาคอมพิวเตอร์จัดโครงการการพัฒนาเว็บแอปพลิเคชันขั้นสูงสำหรับนักศึกษาภาควิชาคอมพิวเตอร์และบุคคลทั่วไป
+                    วันเสาร์ที่ 6 สิงหาคม 2565 เวลา 8.00 – 16.30 น. วิทยากรโดย คุณบรรเจิด ประทุมหอม และคณะ จากบริษัท
+                    Wisesoft
+                </p>
+                <div class="row text-center">
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal151"
+                            style="border: none;">
+                            <img src="img/pnews/13.1.png" class="imgg" alt="" width="100%">
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal152"
+                            style="border: none;">
+                            <img src="img/pnews/13.2.png" class="imgg" alt="" width="100%">
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal153"
+                            style="border: none;">
+                            <img src="img/pnews/13.3.png" class="imgg" alt="" width="100%">
+                        </button>
+                    </div>
+                </div>
 
-                        </div>
-                    </div>
-                    <div class="modal fade" id="exampleModal152" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/13.2.png" class="imgg mbb" alt="" width="130%">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal151" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/13.1.png" class="imgg mbb" alt="" width="130%">
 
-                        </div>
                     </div>
-                    <div class="modal fade" id="exampleModal153" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/13.3.png" class="imgg mbb" alt="" width="130%">
-                        </div>
+                </div>
+                <div class="modal fade" id="exampleModal152" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/13.2.png" class="imgg mbb" alt="" width="130%">
+
                     </div>
-                    <hr>
-                    <div class="container like">
-                        <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
-                    </div><br>
+                </div>
+                <div class="modal fade" id="exampleModal153" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/13.3.png" class="imgg mbb" alt="" width="130%">
+                    </div>
+                </div>
+                <hr>
+                <div class="container like">
+                    <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
+                </div><br>
             </div>
 
 
@@ -2018,73 +1911,73 @@
 
 
             <div class="container c6">
-                <a name="rd1">
-                    <img class="out1" src="img/logonav.png" alt="">
-                    <a href=""
-                        style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
-                        CMRU</a>
-                    <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 25 กรกฎาคม 2565</p>
-                    <p> ภาควิชาคอมพิวเตอร์จัดกิจกรรมปรับพื้นเตรียมความพร้อมนักศึกษา ชั้นปีที่ 1 ในวันที่ 24 กรกฎาคม
-                        2565<br><br>
 
-                        กิจกรรมปรับพื้นเตรียมความพร้อมนักศึกษาชั้นปีที่ 1 ของภาควิชาคอมพิวเตอร์ จัดขึ้นในวันที่ 24
-                        กรกฎาคม 2565 มีหลักสูตรที่เข้าร่วมได้แก่
-                        หลักสูตรวิทยาการคอมพิวเตอร์ หลักสูตรเทคโนโลยีสารสนเทศ หลักสูตรเทคโนโลยีเว็บ
-                        และหลักสูตรคอมพิวเตอร์ศึกษา<br><br>
+                <img class="out1" src="img/logonav.png" alt="">
+                <a href=""
+                    style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
+                    CMRU</a>
+                <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 25 กรกฎาคม 2565</p>
+                <p> ภาควิชาคอมพิวเตอร์จัดกิจกรรมปรับพื้นเตรียมความพร้อมนักศึกษา ชั้นปีที่ 1 ในวันที่ 24 กรกฎาคม
+                    2565<br><br>
 
-                        วิทยากรโดย<br><br>
+                    กิจกรรมปรับพื้นเตรียมความพร้อมนักศึกษาชั้นปีที่ 1 ของภาควิชาคอมพิวเตอร์ จัดขึ้นในวันที่ 24
+                    กรกฎาคม 2565 มีหลักสูตรที่เข้าร่วมได้แก่
+                    หลักสูตรวิทยาการคอมพิวเตอร์ หลักสูตรเทคโนโลยีสารสนเทศ หลักสูตรเทคโนโลยีเว็บ
+                    และหลักสูตรคอมพิวเตอร์ศึกษา<br><br>
 
-                        1.ผศ.ดร.เอกพงษ์ ดวงดาย อาจารย์ประจำภาควิชาคณิตศาสตร์และสถิติ <br>
-                        2.ผศ.สุภาพร ฟองจันทร์ตา อาจารย์ประจำภาควิชาคณิตศาสตร์และสถิติ <br>
-                        3.อาจารย์กาญจนา ขัติทะจักร์ อาจารย์ประจำภาควิชาคอมพิวเตอร์ <br>
-                        4.อาจารย์ศิริกรณ์ กันขัติ์ อาจารย์ประจำภาควิชาคอมพิวเตอร์ <br>
-                    </p>
-                    <div class="row text-center">
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal171"
-                                style="border: none;">
-                                <img src="img/pnews/16.1.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal172"
-                                style="border: none;">
-                                <img src="img/pnews/16.2.jpg" class="imgg" alt="" width="100%">
-                            </button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal173"
-                                style="border: none;">
-                                <img src="img/pnews/16.3.png" class="imgg" alt="" width="70%">
-                            </button>
-                        </div>
+                    วิทยากรโดย<br><br>
+
+                    1.ผศ.ดร.เอกพงษ์ ดวงดาย อาจารย์ประจำภาควิชาคณิตศาสตร์และสถิติ <br>
+                    2.ผศ.สุภาพร ฟองจันทร์ตา อาจารย์ประจำภาควิชาคณิตศาสตร์และสถิติ <br>
+                    3.อาจารย์กาญจนา ขัติทะจักร์ อาจารย์ประจำภาควิชาคอมพิวเตอร์ <br>
+                    4.อาจารย์ศิริกรณ์ กันขัติ์ อาจารย์ประจำภาควิชาคอมพิวเตอร์ <br>
+                </p>
+                <div class="row text-center">
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal171"
+                            style="border: none;">
+                            <img src="img/pnews/16.1.jpg" class="imgg" alt="" width="100%">
+                        </button>
                     </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal171" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/16.1.jpg" class="imgg mbb" alt="" width="130%">
-
-                        </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal172"
+                            style="border: none;">
+                            <img src="img/pnews/16.2.jpg" class="imgg" alt="" width="100%">
+                        </button>
                     </div>
-                    <div class="modal fade" id="exampleModal172" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/16.2.jpg" class="imgg mbb" alt="" width="130%">
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal173"
+                            style="border: none;">
+                            <img src="img/pnews/16.3.png" class="imgg" alt="" width="70%">
+                        </button>
+                    </div>
+                </div>
 
-                        </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal171" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/16.1.jpg" class="imgg mbb" alt="" width="130%">
+
                     </div>
-                    <div class="modal fade" id="exampleModal173" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog ii">
-                            <img src="img/pnews/16.3.png" class="imgg mbb" alt="" width="130%">
-                        </div>
+                </div>
+                <div class="modal fade" id="exampleModal172" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/16.2.jpg" class="imgg mbb" alt="" width="130%">
+
                     </div>
-                    <hr>
-                    <div class="container like">
-                        <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
-                    </div><br>
+                </div>
+                <div class="modal fade" id="exampleModal173" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii">
+                        <img src="img/pnews/16.3.png" class="imgg mbb" alt="" width="130%">
+                    </div>
+                </div>
+                <hr>
+                <div class="container like">
+                    <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
+                </div><br>
             </div>
 
 
@@ -2147,96 +2040,96 @@
 
 
             <div class="container c6">
-                <a name="rd5">
-                    <img class="out1" src="img/logonav.png" alt="">
-                    <a href=""
-                        style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
-                        CMRU</a>
-                    <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 25 กรกฎาคม 2564</p>
-                    <p>ภาควิชาคอมพิวเตอร์ได้จัดโครงการพัฒนานักศึกษา โครงการอบรมทักษะการผลิตสื่อ
-                        การเรียนการสอนสำหรับจัดการเรียนการสอนในศตวรรษที่ 21
-                        สำหรับนักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา
-                        <br><br>
 
-                        ในวันที่ 18 และ 25 กรกฏาคม 2564 ภาควิชาคอมพิวเตอร์ได้จัดโครงการพัฒนานักศึกษา
-                        โครงการอบรมทักษะการผลิตสื่อ
-                        การเรียนการสอนสำหรับจัดการเรียนการสอนในศตวรรษที่ 21
-                        สำหรับนักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา<br><br>
+                <img class="out1" src="img/logonav.png" alt="">
+                <a href=""
+                    style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
+                    CMRU</a>
+                <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 25 กรกฎาคม 2564</p>
+                <p>ภาควิชาคอมพิวเตอร์ได้จัดโครงการพัฒนานักศึกษา โครงการอบรมทักษะการผลิตสื่อ
+                    การเรียนการสอนสำหรับจัดการเรียนการสอนในศตวรรษที่ 21
+                    สำหรับนักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา
+                    <br><br>
 
-                        โดยมีนักศึกษาชั้นปีที่ 3 สาขาคอมพิวเตอร์ศึกษาเข้าร่วมโครงการ
-                        มีเนื้อหาเป็นการพัฒนาแอปพลิเคชันด้วย MIT App Inventor เป็นการจัดในรูปแบบออนไลน์
-                        โดยได้รับเกียรติจากวิทยากร<br>
-                        – อ.ภาณุวัฒน์ สุวรรณกูล<br>
-                        – อ.ประธาน คำจินะ<br>
+                    ในวันที่ 18 และ 25 กรกฏาคม 2564 ภาควิชาคอมพิวเตอร์ได้จัดโครงการพัฒนานักศึกษา
+                    โครงการอบรมทักษะการผลิตสื่อ
+                    การเรียนการสอนสำหรับจัดการเรียนการสอนในศตวรรษที่ 21
+                    สำหรับนักศึกษาหลักสูตรคอมพิวเตอร์ศึกษา<br><br>
 
-                        <!-- Button trigger modal -->
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal191" style="border: none;">
-                                    <img src="img/pnews/18.1.jpg" class="imgg imgt" alt="" width="100%">
-                                </button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal192" style="border: none;">
-                                    <img src="img/pnews/18.2.jpg" class="imgg imgt" alt="" width="100%">
-                                </button>
-                            </div>
-                        </div>
+                    โดยมีนักศึกษาชั้นปีที่ 3 สาขาคอมพิวเตอร์ศึกษาเข้าร่วมโครงการ
+                    มีเนื้อหาเป็นการพัฒนาแอปพลิเคชันด้วย MIT App Inventor เป็นการจัดในรูปแบบออนไลน์
+                    โดยได้รับเกียรติจากวิทยากร<br>
+                    – อ.ภาณุวัฒน์ สุวรรณกูล<br>
+                    – อ.ประธาน คำจินะ<br>
 
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal193" style="border: none;">
-                                    <img src="img/pnews/18.3.jpg" class="imgg imgt" alt="" width="100%">
-                                </button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal194" style="border: none;">
-                                    <img src="img/pnews/18.4.jpg" class="imgg imgt" alt="" width="100%">
-                                </button>
-                            </div>
-                        </div>
+                    <!-- Button trigger modal -->
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal191"
+                            style="border: none;">
+                            <img src="img/pnews/18.1.jpg" class="imgg imgt" alt="" width="100%">
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal192"
+                            style="border: none;">
+                            <img src="img/pnews/18.2.jpg" class="imgg imgt" alt="" width="100%">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal193"
+                            style="border: none;">
+                            <img src="img/pnews/18.3.jpg" class="imgg imgt" alt="" width="100%">
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal194"
+                            style="border: none;">
+                            <img src="img/pnews/18.4.jpg" class="imgg imgt" alt="" width="100%">
+                        </button>
+                    </div>
+                </div>
 
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal191" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog ii ">
-                                <img src="img/pnews/18.1.jpg" class="imgg mbb" alt="">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal191" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii ">
+                        <img src="img/pnews/18.1.jpg" class="imgg mbb" alt="">
 
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal192" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog ii ">
-                                <img src="img/pnews/18.2.jpg" class="imgg mbb" alt="">
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal192" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii ">
+                        <img src="img/pnews/18.2.jpg" class="imgg mbb" alt="">
 
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal193" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog ii ">
-                                <img src="img/pnews/18.3.jpg" class="imgg mbb" alt="">
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal193" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii ">
+                        <img src="img/pnews/18.3.jpg" class="imgg mbb" alt="">
 
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal194" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog ii ">
-                                <img src="img/pnews/18.4.jpg" class="imgg mbb" alt="">
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal194" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog ii ">
+                        <img src="img/pnews/18.4.jpg" class="imgg mbb" alt="">
 
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
-                    </p>
+                </p>
 
-                    <hr>
-                    <div class="container like">
-                        <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
-                    </div><br>
+                <hr>
+                <div class="container like">
+                    <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
+                </div><br>
             </div>
 
 
@@ -3399,77 +3292,85 @@
 
             <div class="container c6">
                 <a name="rd8">
-                <img class="out1" src="img/logonav.png" alt="">
-                <a href=""
-                    style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
-                    CMRU</a>
-                <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 7 เมษายน 2562</p>
-                <p>นักศึกษาภาควิชาคอมพิวเตอร์ศึกษา มร.ชม.
-                    สร้างสรรค์ผลงานคว้า 7 รางวัล การสร้างสื่ออิเล็กทรอนิกส์มาตรฐาน EPUB 3 ครั้งที่ 2<br><br>
+                    <img class="out1" src="img/logonav.png" alt="">
+                    <a href=""
+                        style="font-size: 19px; font-weight: bold; position: absolute; margin-top: 15px; margin-left: 10px;">ภาควิชาคอมพิวเตอร์
+                        CMRU</a>
+                    <p style="position: absolute; margin-top: -40px; margin-left: 68px;"> 7 เมษายน 2562</p>
+                    <p>นักศึกษาภาควิชาคอมพิวเตอร์ศึกษา มร.ชม.
+                        สร้างสรรค์ผลงานคว้า 7 รางวัล การสร้างสื่ออิเล็กทรอนิกส์มาตรฐาน EPUB 3 ครั้งที่ 2<br><br>
 
-                    อาจารย์ประธาน คำจินะ อาจารย์ภาควิชาคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
-                    เปิดเผยว่า ด้วยศูนย์เทคโนโลยี
-                    อิเล็กทรอนิกส์และคอมพิวเตอร์แห่งชาติได้จัดโครงการ “การประกวดสื่ออิเล็กทรอนิกส์มาตรฐาน EPUB 3”
-                    ครั้งที่ 2 เพื่อส่งเสริมการสร้างหนังสือที่ทุกคน
-                    เข้าถึงและใช้ประโยชน์ได้
-                    โดยการพัฒนาบุคลากรทางการศึกษาให้มีความรู้ความเข้าใจในการสร้างหนังสือและสื่ออิเล็กทรอนิกส์
-                    พร้อมส่งเสริมบูรณาการ
-                    การเรียนรู้โดยนำหนังสือที่ทุกคนเข้าถึงและใช้ประโยชน์ได้ไปใช้ในการเรียนการสอนในโรงเรียนเรียนรวมของสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน
-                    ซึ่งได้เปิดโอกาสให้นิสิต นักศึกษาจากทั่วประเทศ รวมทั้งสิ้น 183 ทีม
-                    ส่งผลงานการสร้างสื่ออิเล็กทรอนิกส์มาตรฐาน EPUB 3 ระดับประถมศึกษา
-                    และระดับมัธยมศึกษาเข้าร่วมการประกวด<a href="#rd8" style="color: rgb(0, 255, 140);"
-                    onclick="myFunction8()" id="myBtn8">... ดูเพิ่มเติม</a>
+                        อาจารย์ประธาน คำจินะ อาจารย์ภาควิชาคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี
+                        มหาวิทยาลัยราชภัฏเชียงใหม่
+                        เปิดเผยว่า ด้วยศูนย์เทคโนโลยี
+                        อิเล็กทรอนิกส์และคอมพิวเตอร์แห่งชาติได้จัดโครงการ “การประกวดสื่ออิเล็กทรอนิกส์มาตรฐาน EPUB 3”
+                        ครั้งที่ 2 เพื่อส่งเสริมการสร้างหนังสือที่ทุกคน
+                        เข้าถึงและใช้ประโยชน์ได้
+                        โดยการพัฒนาบุคลากรทางการศึกษาให้มีความรู้ความเข้าใจในการสร้างหนังสือและสื่ออิเล็กทรอนิกส์
+                        พร้อมส่งเสริมบูรณาการ
+                        การเรียนรู้โดยนำหนังสือที่ทุกคนเข้าถึงและใช้ประโยชน์ได้ไปใช้ในการเรียนการสอนในโรงเรียนเรียนรวมของสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน
+                        ซึ่งได้เปิดโอกาสให้นิสิต นักศึกษาจากทั่วประเทศ รวมทั้งสิ้น 183 ทีม
+                        ส่งผลงานการสร้างสื่ออิเล็กทรอนิกส์มาตรฐาน EPUB 3 ระดับประถมศึกษา
+                        และระดับมัธยมศึกษาเข้าร่วมการประกวด<a href="#rd8" style="color: rgb(0, 255, 140);"
+                            onclick="myFunction8()" id="myBtn8">... ดูเพิ่มเติม</a>
 
-                <span id="dots8"></span><span id="more8"><br><br>
-                    โดยผลปรากฏว่านักศึกษาภาควิชาคอมพิวเตอร์ศึกษา คณะครุศาสตร์ มหาวิทยาลัยราชภัฏเชียงใหม่
-                    ผ่านเข้ารอบชิงชนะเลิศ จำนวน 8 ทีม
-                    สามารถคว้ารางวัลได้ถึง 7 รายการ ได้แก่ รางวัลรองชนะเลิศ อันดับ 1 สื่อระดับประถมศึกษา
-                    รับโล่รางวัลพร้อมเงินรางวัล 30,000 บาท
-                    และรางวัล Popular Vote รับเงินรางวัล 10,000 บาท ได้แก่ ทีม ABB EPUB นายเทพพิทักษ์ เทียมยศ , นายนคเรศ
-                    สมโรย ,
-                    นางสาวจิราวรรณ แสนอ่อง ผลงาน “การแยกสารน่ารู้” รางวัลรองชนะเลิศ อันดับ 2 สื่อระดับมัธยมศึกษา
-                    รับโล่รางวัลพร้อมเงินรางวัล 20,000 บาท
-                    ได้แก่ ทีม Just For Fun นางสาววาสนา ยอดคำ , นางสาวศิริโสภา เมืองใจ , นางสาวอรทัย อินทะรังษี ผลงาน
-                    “การรักษาดุลยภาพอุณหภูมิของร่างกาย”
-                    รางวัลชนะเลิศอันดับ 3 สื่อระดับมัธยมศึกษา รับโล่รางวัลพร้อมเงินรางวัล 10,000 บาท ได้แก่ ทีม Public
-                    นายปฏิภาณ ใจซื่อ , นายพิชชานนทร์ คำเสน ,
-                    นายกฤษฎ์ แดงต่อม ผลงาน “โครงสร้างโลก” รางวัลชมเชย สื่อระดับมัธยมศึกษา รับเงินรางวัล 5,000 บาท ได้แก่
-                    ทีม E2M นางสาวอนุธิดา กันธิมา ,
-                    นางสาวอนุรดี วงศ์เทพ , นางสาวอัญชลี จันทร์เพ็ญ ผลงาน “การถ่ายทอดลักษณะทางพันธุกรรม” และทีม Power
-                    Three นางสาวปนัดดา กลิ้งทะเล ,
-                    นางสาวอารีรัตน์ สมศรี , นางสาวอรอมล มูลรังษี ผลงาน “ระบบประสาท” และรางวัลสื่อที่ผู้พิการเข้าถึงได้
-                    รับของที่ระลึกจากผู้จัดงาน ได้แก่
-                    ทีม com’ed boy นายชัยนรินท์ หลีเพิ่มสุข , นายปวีณ สิทธิวะ , นายพงศกร ดีคำ ผลงาน “แรงโน้มถ่วงของโลก”
-                    ทั้งนี้ในการสร้างสรรค์ผลงานมี
-                    อาจารย์จุฬาวลี มณีเลิศ , ผู้ช่วยศาสตราจารย์พรวนา รัตนชูโชค และอาจารย์ ดร.รสลิน เพตะกร
-                    ภาควิชาคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี
-                    เป็นอาจารย์ที่ปรึกษาและอาจารย์ผู้ควบคุม สำหรับท่านใดที่สนใจสามารถติดตามผลงานได้ที่
-                    ระบบฐานข้อมูลหนังสืออิเล็กทรอนิกส์ที่ทุกคนเข้าถึงและใช้ประโยชน์ได้ ทาง www.epub.aid.in.th
-                </span>
+                        <span id="dots8"></span><span id="more8"><br><br>
+                            โดยผลปรากฏว่านักศึกษาภาควิชาคอมพิวเตอร์ศึกษา คณะครุศาสตร์ มหาวิทยาลัยราชภัฏเชียงใหม่
+                            ผ่านเข้ารอบชิงชนะเลิศ จำนวน 8 ทีม
+                            สามารถคว้ารางวัลได้ถึง 7 รายการ ได้แก่ รางวัลรองชนะเลิศ อันดับ 1 สื่อระดับประถมศึกษา
+                            รับโล่รางวัลพร้อมเงินรางวัล 30,000 บาท
+                            และรางวัล Popular Vote รับเงินรางวัล 10,000 บาท ได้แก่ ทีม ABB EPUB นายเทพพิทักษ์ เทียมยศ ,
+                            นายนคเรศ
+                            สมโรย ,
+                            นางสาวจิราวรรณ แสนอ่อง ผลงาน “การแยกสารน่ารู้” รางวัลรองชนะเลิศ อันดับ 2 สื่อระดับมัธยมศึกษา
+                            รับโล่รางวัลพร้อมเงินรางวัล 20,000 บาท
+                            ได้แก่ ทีม Just For Fun นางสาววาสนา ยอดคำ , นางสาวศิริโสภา เมืองใจ , นางสาวอรทัย อินทะรังษี
+                            ผลงาน
+                            “การรักษาดุลยภาพอุณหภูมิของร่างกาย”
+                            รางวัลชนะเลิศอันดับ 3 สื่อระดับมัธยมศึกษา รับโล่รางวัลพร้อมเงินรางวัล 10,000 บาท ได้แก่ ทีม
+                            Public
+                            นายปฏิภาณ ใจซื่อ , นายพิชชานนทร์ คำเสน ,
+                            นายกฤษฎ์ แดงต่อม ผลงาน “โครงสร้างโลก” รางวัลชมเชย สื่อระดับมัธยมศึกษา รับเงินรางวัล 5,000
+                            บาท ได้แก่
+                            ทีม E2M นางสาวอนุธิดา กันธิมา ,
+                            นางสาวอนุรดี วงศ์เทพ , นางสาวอัญชลี จันทร์เพ็ญ ผลงาน “การถ่ายทอดลักษณะทางพันธุกรรม” และทีม
+                            Power
+                            Three นางสาวปนัดดา กลิ้งทะเล ,
+                            นางสาวอารีรัตน์ สมศรี , นางสาวอรอมล มูลรังษี ผลงาน “ระบบประสาท”
+                            และรางวัลสื่อที่ผู้พิการเข้าถึงได้
+                            รับของที่ระลึกจากผู้จัดงาน ได้แก่
+                            ทีม com’ed boy นายชัยนรินท์ หลีเพิ่มสุข , นายปวีณ สิทธิวะ , นายพงศกร ดีคำ ผลงาน
+                            “แรงโน้มถ่วงของโลก”
+                            ทั้งนี้ในการสร้างสรรค์ผลงานมี
+                            อาจารย์จุฬาวลี มณีเลิศ , ผู้ช่วยศาสตราจารย์พรวนา รัตนชูโชค และอาจารย์ ดร.รสลิน เพตะกร
+                            ภาควิชาคอมพิวเตอร์ คณะวิทยาศาสตร์และเทคโนโลยี
+                            เป็นอาจารย์ที่ปรึกษาและอาจารย์ผู้ควบคุม สำหรับท่านใดที่สนใจสามารถติดตามผลงานได้ที่
+                            ระบบฐานข้อมูลหนังสืออิเล็กทรอนิกส์ที่ทุกคนเข้าถึงและใช้ประโยชน์ได้ ทาง www.epub.aid.in.th
+                        </span>
 
-                </p>
-                <div class="row text-center">
-                    <div class="col">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal131"
-                            style="border: none;">
-                            <img src="img/pnews/11.1.jpg" class="imgg" alt="" width="100%">
-                        </button>
+                    </p>
+                    <div class="row text-center">
+                        <div class="col">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal131"
+                                style="border: none;">
+                                <img src="img/pnews/11.1.jpg" class="imgg" alt="" width="100%">
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal131" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog ii">
-                        <img src="img/pnews/11.1.jpg" class="imgg mbb" alt="" width="130%">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal131" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog ii">
+                            <img src="img/pnews/11.1.jpg" class="imgg mbb" alt="" width="130%">
 
+                        </div>
                     </div>
-                </div>
 
-                <hr>
-                <div class="container like">
-                    <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
-                </div><br>
+                    <hr>
+                    <div class="container like">
+                        <div data-lyket-type="updown" data-lyket-id="my-second-post" data-lyket-namespace="blog"></div>
+                    </div><br>
             </div>
 
 
@@ -3591,6 +3492,7 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
             </script>
         <script src="rm.js"></script>
+        <script src="img.js"></script>
 
 </body>
 

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer CMRU</title>
+
+    <link rel="stylesheet" href="about/sty.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CDN CSS links icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script
+        src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_564ff6fbcd6e7c094a7ec1b550ac57"></script>
+    <style>
+        body {
+            background-color: rgb(246, 246, 246);
+        }
+
+        .reg {
+            border: 15px #a9ffd8;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 8px;
+            background-color: #3EC387;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .t1 {
+            font-weight: bold;
+            color: #B8BBBF;
+            margin: 0 60px;
+            padding: 2px 12px;
+            font-size: 30px;
+        }
+
+        li {
+            position: relative;
+            display: block;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: #3EC387;
+        }
+
+        li:hover {
+            color: #ffffff;
+        }
+
+        li:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .t1:hover {
+            color: #3EC387;
+        }
+
+        .c1 {
+            background-color: rgb(255, 255, 255);
+            width: 225px;
+            height: 225px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 80px auto 70px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .c3 {
+            background-color: rgb(246, 246, 246);
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 30px auto 10px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .F,
+        .L {
+            background-color: rgb(255, 255, 255);
+            width: 370px;
+            height: 370px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 40px auto 40px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c2 {
+            background-color: rgb(255, 255, 255);
+            width: 305px;
+            height: 315px;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c4 {
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+        }
+
+
+        .ico {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            font-size: 50px;
+        }
+
+        .out1 {
+            background-color: #ffffff;
+            border-radius: 50%;
+            height: 50%;
+            margin: 10px auto;
+            border: 4px solid #3EC387;
+        }
+
+        .out2 {
+            background-color: #EDC607;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out3 {
+            background-color: #E84D76;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out4 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out5 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .or {
+            color: orange;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+
+        .bb {
+            font-weight: bold;
+            margin: 30px auto;
+        }
+
+        .b1 {
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .hc {
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .end {
+            text-align: end;
+        }
+
+
+        .imgg {
+            border-radius: 25px;
+        }
+
+        .imgv {
+            margin-bottom: 30px;
+        }
+
+        .imgt {
+            margin-top: 30px;
+        }
+
+        .ii {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ct {
+            font-size: 30px;
+            margin: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .n {
+            padding: 0 0 0 50px;
+
+        }
+
+        .topp {
+            margin: 100px auto 50px auto;
+        }
+
+        .fm {
+            font-size: 20px;
+        }
+
+        .foot {
+            color: #3EC387;
+        }
+
+
+        .c6 {
+            color: white;
+            padding: 20px;
+            border-radius: 50px;
+            margin: 100px auto 70px auto;
+            width: 100%;
+            background-color: #242526;
+            height: 100%;
+        }
+
+        .tcen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .like {
+            background-color: rgb(219, 219, 219);
+            width: 25%;
+            border-radius: 50px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .c6 {
+                width: 100%;
+            }
+
+            .like {
+                width: 50%;
+            }
+
+            .mbb {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .kk {
+            border-radius: 25px;
+        }
+
+        #more {
+            display: none;
+        }
+
+        #more1 {
+            display: none;
+        }
+
+        #more2 {
+            display: none;
+        }
+
+        #more4 {
+            display: none;
+        }
+
+        #more5 {
+            display: none;
+        }
+
+        #more6 {
+            display: none;
+        }
+
+        #more7 {
+            display: none;
+        }
+
+        #more8 {
+            display: none;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .myImg {
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+            margin-top: 70px;
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .c6 {
+                width: 360px;
+                height: 225px;
+            }
+
+            .you {
+                width: 320px;
+                height: 225px;
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body style="background-color: #18191A;">
+    <!-- Start Navbar -->
+    <a name="top">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg  rounded cc fixed-top"
+            aria-label="Thirteenth navbar example">
+            <div class="container-fluid">
+                <a href="index.html"><img src="../img/logonav.png" alt=""></a>
+                <div class="h" style="padding: 0 0 0 10px;"></div>
+                <form class="d-flex text-body-secondary" role="search">
+                    <input style="border-radius: 50px; background-color: #3A3B3C; border: none; color: #FFFFFF;"
+                        class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
+                    <a class="navbar-brand col-lg-2 me-0" href="#"></a>
+                    <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link btn t1" aria-current="page" href="../SocialComputerCMRU.html"><i
+                                    class='bx bxs-home'></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn  t1" href="Live_ComCMRU.html"><i class='bx bx-movie-play'></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn  t1" href="photocomCMRU.html"><i class='bx bx-photo-album'></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn t1" href="#"><i class='bx bxs-user-badge'></i></a>
+                        </li>
+                    </ul>
+                    <div class="d-lg-flex col-lg-4 justify-content-lg-end">
+                        <a class="button reg" style="vertical-align:middle"
+                            href="https://www.facebook.com/messages/t/369168779769167" target="_blank"><span><i
+                                    class='bx bx-conversation bx-tada' style='color:#ffffff'></i> <b>CHAT</b></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+
+        <!-- Start News -->
+        <div class="container">
+            <h2 class="text-center bb" style="color: white; padding-top: 100px;">Albums</h2>
+            <div class="row">
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.4393971913955480&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/198857726_4393975403955131_2957453189904448612_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0debeb&_nc_ohc=oc0mehlP8AIAX8tokZg&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfAaPd2eLLcIqovuIrS0TMFg1pss24ZjWfZgOt6UBqgFFg&oe=6542869B" alt="" width="100%">
+                            <h6 class="hc">โครงการพัฒนาทักษะด้านภาษาอังกฤษสำหรับนักศึกษา</h6>
+                            <br><br>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.4016147921737883&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/149156452_4016192765066732_1226696762632171776_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=bTiR7DkCSecAX9-zwKa&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfBf6ICa1NGAVlKptOd5p1ffhFj7Bxp9DYOlTHpxlEmncg&oe=65427988" alt="" width="100%">
+                            <h6 class="hc">
+                                โครงการเพิ่มพูนทักษะวิชาการและทักษะในศตวรรษที่ 21
+                            </h6>
+                            <br>
+                            
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3749194721766539&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/123713678_3749212861764725_4063018767601706630_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=edqrnj8zj9EAX99VTwK&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfCC-CPFfTtZDeug542OPgScC9MbYB1j_FgJBoZ9QHFQRQ&oe=654275C5" alt="" width="100%">
+                            <h6 class="hc">ภาควิชาคอมพิวเตอร์ ร่วมเป็นวิทยากร โครงการแนะแนวสื่อและเทคโนโลยี
+                            </h6>
+                            <br>
+                        
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3732259263460085&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/123281525_3735831686436176_6011116789167336202_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=ZB4ItrY3aX8AX8_YQov&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfACl2dF1OusORo8DAEstow1qz60A8FDaNRuZEFeQSI26A&oe=65427F5A" alt="" width="100%">
+                            <h6 class="hc">บริการวิชาการ โรงเรียนสองแคววิทยาคม อ.ดอยหล่อ
+                                21</h6>
+                            <br>
+                           
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3690866897599322&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/121492478_3690870174265661_7176983911695643939_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=0debeb&_nc_ohc=mHddORlR8ioAX-217C9&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfAtH_EYDH_MTD6yeOUMRvJ4Ti5nphYe4gb18shhaIUhiw&oe=65428A80" alt="" width="100%">
+                            <h6 class="hc">ไหว้ครูภาควิชาคอมพิวเตอร์ 2563</h6>
+                            <br>
+                           
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3666824790003533&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/121001735_3667381519947860_214720142497574050_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0debeb&_nc_ohc=PZ5ERUsXNJEAX-bd6B5&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfDzSSAnME1Yze3bJRCYcLUzfACq1uwLGVxXBplPq9Jw_w&oe=654282DD" alt="" width="100%">
+                            <h6 class="hc">บริการวิชาการ โรงเรียนเชียงใหม่คริสเตียน จ.เชียงใหม่
+                            </h6>
+                            <br>
+                           
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3629727187046627&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/120185140_3629733517045994_2586753894358559322_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=uvuIVxfBgjYAX-2kW5G&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfDoy9vbVhSt9gcLE07j_mQ75_jkJwpGWqTuoZXkqdnBNQ&oe=6542599A" alt="" width="100%">
+                            <h6 class="hc">บริการวิชาการ รร.ส่วนบุญโญปถ้มภ์ จ.ลำพูน
+                            </h6>
+                            <br><br>
+                         
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3556672597685420&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/118616636_3556679534351393_3388610448917480699_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=0debeb&_nc_ohc=4cJyV_oBdk8AX-nW5SW&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfAnvymO3aQYwAMzgXVzIYxO9J8L3ASMNh_7JWnfill5yw&oe=654258A3" alt="" width="100%">
+                            <h6 class="hc">อบรมการจัดการเรียนการสอนแบบ Active learning วิทยาลัยชุมชนตาก</h6>
+                            <br>
+                          
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3508538509165496&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/118167146_3519603154725698_8598154396925600874_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=xfngmLs2spEAX_unn9s&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfBiRWU5jOIRIXjSIk_r5-Q87dDPWe3NHA4oBICjs67gmQ&oe=65427BC6" alt="" width="100%">
+                            <h6 class="hc">บริการวิชาการ โรงเรียนเทพศิรินทร์ เชียงใหม่</h6>
+                            <br>
+                         
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3522395647779782&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/117971782_3522399481112732_2409901310908170263_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0debeb&_nc_ohc=Zkc8ZS-PrBQAX-fCbFu&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfAhYOeO1BxlspQxGdP2ZYZlZozavCkLXlkZAdkNy0Z7lA&oe=65428D87" alt="" width="100%">
+                            <h6 class="hc">การจัดสอบคุณวุฒิวิชาชีพคอมพิวเตอร์ ด้านการวิเคราะห์และออกแบบระบบ
+                            </h6>
+                            <br>
+                        
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3504222506263763&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/117906058_3504223229597024_4788160877012732618_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=aS56YRX8-eEAX-MsvKa&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfAC-RzPEUltiA1RNrfIp8ZH1fl1s5gkX24yH7IjlQ45tg&oe=65425DCA" alt="" width="100%">
+                            <h6 class="hc">บริการวิชาการ โรงเรียนวัดบ้านม้า
+                            </h6>
+                            <br><br>
+                      
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.3500832269936120&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/117445148_3500836216602392_2496169286411870103_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=PClevhQq-Y0AX8lkF-v&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfDeCVAJP36Ol4VfN0Me4VJK0U8uxnd6cNQGjn5jKYz9-A&oe=65427093" alt="" width="100%">
+                            <h6 class="hc">บริการวิชาการ โรงเรียนเชียงดาววิทยาคม</h6>
+                            <br>
+                         
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.2313960135290012&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/51924546_2313960291956663_5845992007922614272_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=kMyrqIz8XYUAX_7yjaj&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfDpC5GZOVPsqJIbKDrCJSH-wL2wnMRpMMBPU0oGJIIlfQ&oe=65428219" alt="" width="100%">
+                            <h6 class="hc">อบรม GOGO board 2562</h6>
+                            <br>
+                           
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.2308669455819080&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/51885795_2308669582485734_5285542103424696320_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=Lgymnt7pvbQAX8wZiY8&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfBRAxQ8zI9zab82x75ASNzATF6UyQqSMx-BXwBvTxCI4Q&oe=654288FF" alt="" width="100%">
+                            <h6 class="hc">การนำเสนอผลงานรอบที่ 2 โครงการ NSC2019
+                            </h6>
+                            <br>
+                      
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.2294532677232758&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/51356277_2294532830566076_6245106697216458752_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=Td5lz-5A2s0AX8y3vk7&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfDEOF4_9KoMo7_AIFI3HMvEOIztNkla0kdv1IcyVIhIFg&oe=65426DDA" alt="" width="100%">
+                            <h6 class="hc">แข่งขันพัฒนาโครงการและนวัตกรรมคอมพิวเตอร์ Internet of Things
+                            </h6>
+                            <br><br>
+                
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.facebook.com/media/set/?set=a.2027748780577817&type=3" target="_blank">
+                        <div class="container c2">
+                            <img class="imgg" src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t1.6435-9/38703210_2027749487244413_5097326697959653376_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=kBCIO1SYPQgAX_iMi8a&_nc_ht=scontent.fcnx4-1.fna&oh=00_AfA_ak_FGAtMSclRkdnyfgn-g7o-bGwWhBpKw1GHxeiLHA&oe=65425BA3" alt="" width="100%">
+                            <h6 class="hc">Computer Programming Contest</h6>
+                            <br>
+                        
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End News -->
+
+
+        <!-- Start Footer-->
+        <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">เกี่ยวกับภาควิชา</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-revision bx-spin' style='color:#ffffff'></i> ประวัติภาควิชา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-diamond bx-tada' style='color:#ffffff'></i> ปรัชญา วิสัยทัศน์
+                                        พันธกิจ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
+                                        วีดิทัศน์แนะนำภาควิชา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-user-badge bx-tada' style='color:#ffffff'></i> บุคลาลากร</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">หลักสูตร</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-desktop bx-tada' style='color:#ffffff'></i>
+                                        วิทยาการคอมพิวเตอร์</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-wifi bx-flashing' style='color:#ffffff'></i>
+                                        เทคโนยีสารสนเทศ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-chalkboard bx-tada' style='color:#ffffff'></i>
+                                        คอมพิวเตอร์ศึกษา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-code-alt bx-tada' style='color:#ffffff'></i> เทคโนโลยีเว็บ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-cog bx-spin' style='color:#ffffff'></i> นวัตกรรมดิจิทัล</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
+                                        วีดิทัศน์แนะนำหลักสูตร</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">อื่นๆ</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-briefcase bx-tada' style='color:#ffffff'></i>
+                                        เตรียม/ฝึกประสบการณ์</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-graduation bx-tada' style='color:#ffffff'></i>
+                                        ฝึกประสบการณ์วิชาชีพครู</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxl-redux bx-spin' style='color:#ffffff'></i>
+                                        การศึกษาอิสระด้านคอมฯ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form>
+                                <h4 class="text-body-secondary">ภาควิชาคอมพิวเตอร์</h4>
+                                <h6 class="text-body-secondary">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
+                                </h6><br>
+                                <div class="text-body-secondary">
+                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7
+                                        ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
+                                        <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                        0-5388-5635(โทรศัพท์) <br>
+                                        <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                        0-5388-5635(โทรสาร) <br><br><br>
+                                        <a href="" class="text-body-secondary" style="font-size: 20px;">
+                                            <i class='bx bxl-facebook-circle bx-tada' style='color:#3EC387'></i> :
+                                            ภาควิชาคอมพิวเตอร์ CMRU
+                                        </a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <p class="text-body-secondary">Copyright &copy;2023 Department of Computer CMRU. All rights
+                            reserved Designed By <span><a target="_blank" class="foot"
+                                    href="https://github.com/NightBrain">@NightBrain</a></span></p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-body-emphasis" href="#top">GO TO TOP <i
+                                        class='bx bxs-to-top bx-fade-down' style='color:#ffffff'></i></a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- End Footer-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+        <script src="rm.js"></script>
+        <script src="img.js"></script>
+
+</body>
+
+</html>

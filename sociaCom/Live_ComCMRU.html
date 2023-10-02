@@ -5,60 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
-    <link rel="stylesheet" href="../about/sty.css">
-    <link rel="stylesheet" href="buttons.css">
+
+    <link rel="stylesheet" href="about/sty.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="icon" type="image/png" href="img/logo.png">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- CDN CSS links icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script
+        src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_564ff6fbcd6e7c094a7ec1b550ac57"></script>
     <style>
         body {
             background-color: rgb(246, 246, 246);
-        }
-
-        .dropdown {
-            padding: auto 100px;
-        }
-
-        .dropbtn {
-            text-decoration: none;
-            color: #666666;
-            font-size: 14px;
-            border: none;
-        }
-
-        .dropbtn:hover {
-            color: #3EC387;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 250px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 20px;
-        }
-
-        .dropdown-content a {
-            color: #666666;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border-radius: 20px;
-        }
-
-        .dropdown-content a:hover {
-            color: #3EC387;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
 
         .reg {
@@ -107,36 +68,149 @@
 
         .t1 {
             font-weight: bold;
-            color: #666666;
+            color: #B8BBBF;
+            margin: 0 60px;
             padding: 2px 12px;
+            font-size: 30px;
+        }
+
+        li {
+            position: relative;
+            display: block;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: #3EC387;
+        }
+
+        li:hover {
+            color: #ffffff;
+        }
+
+        li:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
         .t1:hover {
             color: #3EC387;
         }
 
-        .c6 {
-            color: white;
-            padding: 20px;
-            border-radius: 50px;
-            margin: 50px auto 70px auto;
+        .c1 {
+            background-color: rgb(255, 255, 255);
+            width: 225px;
+            height: 225px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 80px auto 70px auto;
             box-shadow: 5px 10px 8px #888888;
-            width: 3000px;
-            background: red;
-            /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(90deg, rgba(37, 117, 252, 1), rgba(245, 87, 108, 1));
-            /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(90deg, rgba(37, 117, 252, 1), rgba(245, 87, 108, 1));
-            /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(90deg, rgba(37, 117, 252, 1), rgba(245, 87, 108, 1));
-            /* For Firefox 3.6 to 15 */
-            background: linear-gradient(90deg, rgba(37, 117, 252, 1), rgba(245, 87, 108, 1));
-            /* Standard syntax (must be last) */
+        }
+
+        .c3 {
+            background-color: rgb(246, 246, 246);
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 30px auto 10px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .F,
+        .L {
+            background-color: rgb(255, 255, 255);
+            width: 370px;
+            height: 370px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 40px auto 40px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c2 {
+            background-color: #effaff;
+            width: 305px;
+            height: 450px;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c4 {
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+        }
+
+
+        .ico {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            font-size: 50px;
+        }
+
+        .out1 {
+            background-color: #ffffff;
+            border-radius: 50%;
+            height: 50%;
+            margin: 10px auto;
+            border: 4px solid #3EC387;
+        }
+
+        .out2 {
+            background-color: #EDC607;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out3 {
+            background-color: #E84D76;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out4 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out5 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
         }
 
         a {
             text-decoration: none;
             color: #000;
+        }
+
+        .or {
+            color: orange;
         }
 
         p {
@@ -146,7 +220,12 @@
 
         .bb {
             font-weight: bold;
-            margin: 50px auto;
+            margin: 30px auto;
+        }
+
+        .b1 {
+            font-weight: bold;
+            margin: 20px auto;
         }
 
         .hc {
@@ -160,7 +239,15 @@
 
 
         .imgg {
-            border-radius: 20px;
+            border-radius: 25px;
+        }
+
+        .imgv {
+            margin-bottom: 30px;
+        }
+
+        .imgt {
+            margin-top: 30px;
         }
 
         .ii {
@@ -175,8 +262,13 @@
             border-radius: 50px;
         }
 
-        .nn {
-            font-weight: bold;
+        .n {
+            padding: 0 0 0 50px;
+
+        }
+
+        .topp {
+            margin: 100px auto 50px auto;
         }
 
         .fm {
@@ -187,47 +279,164 @@
             color: #3EC387;
         }
 
-        .hd {
-            font-size: 20px;
-        }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #000000bc;
-        }
-
-        .ht {
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .kf {
+        .c6 {
             color: white;
-            font-size: 20px;
+            padding: 20px;
+            border-radius: 50px;
+            margin: 100px auto 70px auto;
+            width: 100%;
+            background-color: #242526;
+            height: 100%;
         }
 
-        .pf {
-            font-size: 20px;
+        .tcen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .dfn {
-            font-weight: bold;
+        .like {
+            background-color: rgb(219, 219, 219);
+            width: 25%;
+            border-radius: 50px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .c6 {
+                width: 100%;
+            }
+
+            .like {
+                width: 50%;
+            }
+
+            .mbb {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .kk {
+            border-radius: 25px;
+        }
+
+        #more {
+            display: none;
+        }
+
+        #more1 {
+            display: none;
+        }
+
+        #more2 {
+            display: none;
+        }
+
+        #more4 {
+            display: none;
+        }
+
+        #more5 {
+            display: none;
+        }
+
+        #more6 {
+            display: none;
+        }
+
+        #more7 {
+            display: none;
+        }
+
+        #more8 {
+            display: none;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .myImg {
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+            margin-top: 70px;
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
         }
 
         @media screen and (max-width: 480px) {
             .c6 {
                 width: 360px;
-                height: 265px;
+                height: 225px;
             }
 
             .you {
@@ -235,18 +444,46 @@
                 height: 225px;
             }
         }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
-<body>
+<body style="background-color: #18191A;">
     <!-- Start Navbar -->
     <a name="top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg  rounded cc fixed-top"
+            aria-label="Thirteenth navbar example">
             <div class="container-fluid">
                 <a href="index.html"><img src="../img/logonav.png" alt=""></a>
-                <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
-                    href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
-                    Computer CMRU</a>
+                <div class="h" style="padding: 0 0 0 10px;"></div>
+                <form class="d-flex text-body-secondary" role="search">
+                    <input style="border-radius: 50px; background-color: #3A3B3C; border: none; color: #FFFFFF;"
+                        class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -257,93 +494,56 @@
                     <a class="navbar-brand col-lg-2 me-0" href="#"></a>
                     <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" aria-current="page" href="../index.html"><i
-                                    class='bx bxs-home'></i> หน้าหลัก</a>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">เกี่ยวกับภาควิชา</a>
-                            <div class="dropdown-content">
-                                <a href="history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
-                                <a href="vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
-                                <a href="vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
-                                <a href="staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
-                            </div>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">หลักสูตร</a>
-                            <div class="dropdown-content">
-                                <a href="#"><i class='bx bx-desktop'></i> วิทยาการคอมพิวเตอร์</a>
-                                <a href="#"><i class='bx bx-wifi'></i> เทคโนยีสารสนเทศ</a>
-                                <a href="#"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
-                                <a href="#"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
-                                <a href="#"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
-                                <a href="#"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำหลักสูตร</a>
-                            </div>
+                            <a class="nav-link btn t1" aria-current="page" href="../SocialComputerCMRU.html"><i
+                                    class='bx bxs-home'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="#">ข่าวประชาสัมพันธ์</a>
+                            <a class="nav-link btn  t1" href="Live_ComCMRU.html"><i class='bx bx-movie-play'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="#">กิจกรรมของภาควิชา</a>
+                            <a class="nav-link btn  t1" href="photocomCMRU.html"><i class='bx bx-photo-album'></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="#">ติดต่อภาควิชา</a>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">อื่นๆ</a>
-                            <div class="dropdown-content">
-                                <a href="#"><i class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
-                                <a href="#"><i class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
-                                <a href="#"><i class='bx bxl-redux'></i> การศึกษาอิสระด้านคอมฯ</a>
-                            </div>
+                            <a class="nav-link btn t1" href="#"><i class='bx bxs-user-badge'></i></a>
                         </li>
                     </ul>
                     <div class="d-lg-flex col-lg-4 justify-content-lg-end">
                         <a class="button reg" style="vertical-align:middle"
-                            href="https://reg.cmru.ac.th/registrar/home.asp" target="_blank"><span><i
-                                    class='bx bxs-graduation'></i> REG</span></a>
+                            href="https://www.facebook.com/messages/t/369168779769167" target="_blank"><span><i
+                                    class='bx bx-conversation bx-tada' style='color:#ffffff'></i> <b>CHAT</b></span></a>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- End Navbar -->
 
-        <!-- Start Carousel -->
-        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="imagee" src="../img/imga/his.png" alt="" width="100%" height="100%">
-                    <div class="overlay">
-                        <div class="container">
-                            <div class="carousel-caption ht">
-                                <h1>วีดิทัศน์แนะนำหลักสูตร</h1>
-                                <p>Course introduction video</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <!-- Start contact -->
+        <div class="container">
+            <h2 class="text-center bb" style="color: white; padding-top: 100px;">Live</h2>
+        <div class="container c6">
+            <div class="container ii">
+                <iframe style="border-radius: 40px;"
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2Fvideos%2F1099627507597948%2F&show_text=false&width=560&t=0"
+                    width="1280" height="720" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true"></iframe>
             </div>
         </div>
-        <!-- End Carousel -->
-
-        <!-- Start timeline -->
-        <section class="gradient-custom-5">
-            <div class="container py-5">
-                <div class="container c6">
-                    <iframe style="border-radius: 40px;" class="you" width="1280" height="720"
-                        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2Fvideos%2F1918825158136847%2F&show_text=false&width=560&t=0"
-                        width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                        allowFullScreen="true"></iframe>
-                </div>
+        <div class="container c6">
+            <div class="container ii">
+                <iframe style="border-radius: 40px;"
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCMRUCOMPUTER%2Fvideos%2F2878690878931253%2F&show_text=false&width=560&t=0"
+                    width="1280" height="720" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true"></iframe>
             </div>
-        </section>
-        <!-- End timeline -->
+        </div>
+        </div>
+        <!-- End contact -->
+
 
         <!-- Start Footer-->
         <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
@@ -422,7 +622,8 @@
                                 <h6 class="text-body-secondary">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
                                 </h6><br>
                                 <div class="text-body-secondary">
-                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7 ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
+                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7
+                                        ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
                                         <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
                                         0-5388-5635(โทรศัพท์) <br>
                                         <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
@@ -453,8 +654,11 @@
         <!-- End Footer-->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+        <script src="rm.js"></script>
+        <script src="img.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer CMRU</title>
+
+    <link rel="stylesheet" href="about/sty.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CDN CSS links icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script
+        src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_564ff6fbcd6e7c094a7ec1b550ac57"></script>
+    <style>
+        body {
+            background-color: rgb(246, 246, 246);
+        }
+
+        .reg {
+            border: 15px #a9ffd8;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 8px;
+            background-color: #3EC387;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .t1 {
+            font-weight: bold;
+            color: #B8BBBF;
+            margin: 0 60px;
+            padding: 2px 12px;
+            font-size: 30px;
+        }
+
+        li {
+            position: relative;
+            display: block;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: #3EC387;
+        }
+
+        li:hover {
+            color: #ffffff;
+        }
+
+        li:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .t1:hover {
+            color: #3EC387;
+        }
+
+        .c1 {
+            background-color: rgb(255, 255, 255);
+            width: 225px;
+            height: 225px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 80px auto 70px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .c3 {
+            background-color: rgb(246, 246, 246);
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 30px auto 10px auto;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .F,
+        .L {
+            background-color: rgb(255, 255, 255);
+            width: 370px;
+            height: 370px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 40px auto 40px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c2 {
+            background-color: #242526;
+            color: #FFFFFF;
+            width: 305px;
+            height: 315px;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto 20px auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .c4 {
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+            margin: 20px auto 20px auto;
+        }
+
+
+        .ico {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            font-size: 50px;
+        }
+
+        .out1 {
+            background-color: #ffffff;
+            border-radius: 50%;
+            height: 50%;
+            margin: 10px auto;
+            border: 4px solid #3EC387;
+        }
+
+        .out2 {
+            background-color: #EDC607;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out3 {
+            background-color: #E84D76;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out4 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .out5 {
+            background-color: #048DE8;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .or {
+            color: orange;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+
+        .bb {
+            font-weight: bold;
+            margin: 30px auto;
+        }
+
+        .b1 {
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .hc {
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .end {
+            text-align: end;
+        }
+
+
+        .imgg {
+            border-radius: 25px;
+        }
+
+        .imgv {
+            margin-bottom: 30px;
+        }
+
+        .imgt {
+            margin-top: 30px;
+        }
+
+        .ii {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ct {
+            font-size: 30px;
+            margin: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .n {
+            padding: 0 0 0 50px;
+
+        }
+
+        .topp {
+            margin: 100px auto 50px auto;
+        }
+
+        .fm {
+            font-size: 20px;
+        }
+
+        .foot {
+            color: #3EC387;
+        }
+
+
+        .c6 {
+            color: white;
+            padding: 20px;
+            border-radius: 50px;
+            margin: 100px auto 70px auto;
+            width: 100%;
+            background-color: #242526;
+            height: 100%;
+        }
+
+        .tcen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .like {
+            background-color: rgb(219, 219, 219);
+            width: 25%;
+            border-radius: 50px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .c6 {
+                width: 100%;
+            }
+
+            .like {
+                width: 50%;
+            }
+
+            .mbb {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .kk {
+            border-radius: 25px;
+        }
+
+        #more {
+            display: none;
+        }
+
+        #more1 {
+            display: none;
+        }
+
+        #more2 {
+            display: none;
+        }
+
+        #more4 {
+            display: none;
+        }
+
+        #more5 {
+            display: none;
+        }
+
+        #more6 {
+            display: none;
+        }
+
+        #more7 {
+            display: none;
+        }
+
+        #more8 {
+            display: none;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .myImg {
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+            margin-top: 70px;
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .c6 {
+                width: 360px;
+                height: 225px;
+            }
+
+            .you {
+                width: 320px;
+                height: 225px;
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .c7 {
+            background-color: rgb(255, 255, 255);
+            width: 370px;
+            height: 520px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 40px auto 0 auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .imgg {
+            border-radius: 50%;
+            width: 50%;
+            border: 10px solid #3EC387;
+        }
+        .imggy {
+            border-radius: 50%;
+            width: 50%;
+            border: 10px solid #ffee00;
+        }
+        .con {
+            text-align: start;
+        }
+
+        .con p {
+            font-size: 20px;
+            padding: 0 0 0 18px;
+        }
+
+        .kb {
+            font-size: 20px;
+        }
+        .hc {
+            font-weight: bold;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+        .hc1 {
+            font-weight: bold;
+            margin: 10px auto;
+        }
+        .fg {
+            color: #15d635;
+        }
+
+        .fy {
+            color: #ffee00;
+        }
+    </style>
+</head>
+
+<body style="background-color: #18191A;">
+    <!-- Start Navbar -->
+    <a name="top">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg  rounded cc fixed-top"
+            aria-label="Thirteenth navbar example">
+            <div class="container-fluid">
+                <a href="index.html"><img src="../img/logonav.png" alt=""></a>
+                <div class="h" style="padding: 0 0 0 10px;"></div>
+                <form class="d-flex text-body-secondary" role="search">
+                    <input style="border-radius: 50px; background-color: #3A3B3C; border: none; color: #FFFFFF;"
+                        class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
+                    <a class="navbar-brand col-lg-2 me-0" href="#"></a>
+                    <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link btn t1" aria-current="page" href="../SocialComputerCMRU.html"><i
+                                    class='bx bxs-home'></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn  t1" href="Live_ComCMRU.html"><i class='bx bx-movie-play'></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn  t1" href="photocomCMRU.html"><i class='bx bx-photo-album'></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn t1" href="#"><i class='bx bxs-user-badge'></i></a>
+                        </li>
+                    </ul>
+                    <div class="d-lg-flex col-lg-4 justify-content-lg-end">
+                        <a class="button reg" style="vertical-align:middle"
+                            href="https://www.facebook.com/messages/t/369168779769167" target="_blank"><span><i
+                                    class='bx bx-conversation bx-tada' style='color:#ffffff'></i> <b>CHAT</b></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+
+        <!-- Start News -->
+        <div class="container">
+            <h2 class="text-center bb" style="color: white; padding-top: 100px;">บุคลากรภาควิชาคอมพิวเตอร์</h2>
+            <div class="container">
+                <br>
+                <h3 style="color: #FFFFFF;">อาจารย์ประจำภาควิชาคอมพิวเตอร์</h3>
+                <hr style="color: #FFFFFF;">
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/001.jpg" alt="" width="100%">
+                            <h4 class="hc1">อาจารย์ ดร.พิรุฬห์ แก้วฟุ้งรังษี</h4>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>ตำแหน่ง</b> : หัวหน้าภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>Email</b> : piroon@g.cmru.ac.th</p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/01.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ดร.เสรี ปานซาง</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/02.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ดร.กาญจนา ทองบุญนาค</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/03.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์อำนาจ โกวรรณ</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2 หรือ <br> ห้องผอ.สำนักดิจิทัลเพื่อการศึกษา <br>
+                                    อาคาร 6
+                                    ชั้น 3</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/04.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ว่าที่ ร.ต.ธฤษ เรือนคำ</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/05.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ดร.ชนินทร์ มหัทธนชัย</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/06.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ดร.สารุ่ง ตันตระกูล</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/07.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ดร.บุษราภรณ์ มหัทธนชัย</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/08.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ดร.ศุภกฤษ เมธีโภคพงษ์</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/09.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์กาญจนา ขัติทะจักร์</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/10.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ดร.อรนุช พันโท</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/11.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ดร.วาสนา สันติธีรากุล</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2 หรือ <br> หรือห้องรองผอ.สำนักหอสมุด <br> อาคาร 26
+                                    ชั้น 8
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/12.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ศศิณิส์ภา พัชรธนโรจน์</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/13.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์กฤษณา เขียวมั่ง</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/14.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.พิมพ์ชนก สุวรรณศรี</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imggy" src="../img/imga/t/15.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ศิริพงศ์ ศิริสวัสดิ์</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fy">ลาศึกษาต่อ</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/16.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์พริ้มไพร วงค์ชมภู</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/17.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์จุฬาวลี มณีเลิศ</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/18.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ประธาน คำจินะ</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imggy" src="../img/imga/t/19.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ทัศนันท์ จันทร</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fy">ลาศึกษาต่อ</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/20.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.สมรวี อร่ามกุล</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/21.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ชัยทัศน์ เกียรติยากุล</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/22.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.เกษรา ปัญญา</h6>
+                            <p class="kb">ข้าราชการพลเรือนในสถาบันอุดมศึกษา</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/23.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ดร.ภัทราพร พรหมคำตัน</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/24.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.ดร.รสลิน เพตะกร</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>Email</b> : roselin@cmru.ac.th</p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/25.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ดร.จิตราภรณ์ ธาราพิทักษ์วงศ์</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/26.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ ดร.ทิวาวัลย์ ต๊ะการ</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/27.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ภาณุวัฒน์ สุวรรณกูล</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/28.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์ศิริกรณ์ กันขัติ์</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/29.jpg" alt="" width="100%">
+                            <h6 class="hc">ผศ.พรวนา รัตนชูโชค</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imggy" src="../img/imga/t/30.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์พงศธร ฟองตา</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fy">ลาศึกษาต่อ</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imggy" src="../img/imga/t/31.jpg" alt="" width="100%">
+                            <h6 class="hc">อาจารย์คชพันธ์ บุญคง</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายวิชาการ</p>
+                            <div class="con">
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fy">ลาศึกษาต่อ</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <h3 style="color: #FFFFFF;">นักวิชาการศึกษา</h3>
+                <hr style="color: #FFFFFF;">
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/1.jpg" alt="" width="100%">
+                            <h6 class="hc">คุณกรีฑา ปิลันธนดิลก</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายสนับสนุน</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container c7">
+                            <img class="imgg" src="../img/imga/t/2.jpg" alt="" width="100%">
+                            <h6 class="hc">คุณณัฐพร ปิงมูลทา</h6>
+                            <p class="kb">พนักงานมหาวิทยาลัยสายสนับสนุน</p>
+                            <div class="con">
+
+                                <p><b>สังกัด</b> : ภาควิชาคอมพิวเตอร์</p>
+                                <p><b>สถานะ</b> : <samp class="fg">ปฏิบัติงาน</samp></p>
+                                <p><b>ห้องพักอาจารย์</b> : SCI2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 50px;"></div>
+        <!-- End News -->
+
+
+        <!-- Start Footer-->
+        <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">เกี่ยวกับภาควิชา</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-revision bx-spin' style='color:#ffffff'></i> ประวัติภาควิชา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-diamond bx-tada' style='color:#ffffff'></i> ปรัชญา วิสัยทัศน์
+                                        พันธกิจ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
+                                        วีดิทัศน์แนะนำภาควิชา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-user-badge bx-tada' style='color:#ffffff'></i> บุคลาลากร</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">หลักสูตร</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-desktop bx-tada' style='color:#ffffff'></i>
+                                        วิทยาการคอมพิวเตอร์</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-wifi bx-flashing' style='color:#ffffff'></i>
+                                        เทคโนยีสารสนเทศ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-chalkboard bx-tada' style='color:#ffffff'></i>
+                                        คอมพิวเตอร์ศึกษา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bx-code-alt bx-tada' style='color:#ffffff'></i> เทคโนโลยีเว็บ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-cog bx-spin' style='color:#ffffff'></i> นวัตกรรมดิจิทัล</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
+                                        วีดิทัศน์แนะนำหลักสูตร</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">อื่นๆ</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-briefcase bx-tada' style='color:#ffffff'></i>
+                                        เตรียม/ฝึกประสบการณ์</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-graduation bx-tada' style='color:#ffffff'></i>
+                                        ฝึกประสบการณ์วิชาชีพครู</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxl-redux bx-spin' style='color:#ffffff'></i>
+                                        การศึกษาอิสระด้านคอมฯ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form>
+                                <h4 class="text-body-secondary">ภาควิชาคอมพิวเตอร์</h4>
+                                <h6 class="text-body-secondary">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
+                                </h6><br>
+                                <div class="text-body-secondary">
+                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7
+                                        ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
+                                        <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                        0-5388-5635(โทรศัพท์) <br>
+                                        <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                        0-5388-5635(โทรสาร) <br><br><br>
+                                        <a href="" class="text-body-secondary" style="font-size: 20px;">
+                                            <i class='bx bxl-facebook-circle bx-tada' style='color:#3EC387'></i> :
+                                            ภาควิชาคอมพิวเตอร์ CMRU
+                                        </a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <p class="text-body-secondary">Copyright &copy;2023 Department of Computer CMRU. All rights
+                            reserved Designed By <span><a target="_blank" class="foot"
+                                    href="https://github.com/NightBrain">@NightBrain</a></span></p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-body-emphasis" href="#top">GO TO TOP <i
+                                        class='bx bxs-to-top bx-fade-down' style='color:#ffffff'></i></a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- End Footer-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+        <script src="rm.js"></script>
+        <script src="img.js"></script>
+
+</body>
+
+</html>

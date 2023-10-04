@@ -1,11 +1,8 @@
-const spinnerWrapperEI = document.querySelector('.loader');
+const spinnerWrapperEI = document.querySelector(".loader");
 
 setTimeout(() => {
-  spinnerWrapperEI.style.opacity = '0';
-
-  spinnerWrapperEI.classList.add("loader-hidden");
-
-  spinnerWrapperEI.addEventListener("transitionend", () => {
-    document.body;
-  });
-}, 1000);
+  spinnerWrapperEI.style.opacity = "0";
+  setTimeout(() => {
+    spinnerWrapperEI.classList.add("loader-hidden");
+  }, 500);
+}, 2000);

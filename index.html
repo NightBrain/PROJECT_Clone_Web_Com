@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Computer CMRU</title>
+    <link rel="stylesheet" href="preloading.css">
     <link rel="stylesheet" href="about/sty.css">
 
     <link rel="stylesheet" href="buttons.css">
@@ -303,82 +304,108 @@
             transform: scaleX(1);
             transform-origin: left;
         }
+
         .topp {
             margin-top: 80px;
+        }
+
+
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
         }
     </style>
 </head>
 
 <body>
-    <!-- Start Navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc fixed-top" aria-label="Thirteenth navbar example">
-            <div class="container-fluid">
-                <a href="index.html"><img src="img/logonav.png" alt=""></a>
-                <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
-                    href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
-                    Computer CMRU</a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div class="loader">
+        <div class="text">
+            L O A D I N G . . .
+          </div>
+          <div class="box">
+            <div class="comp"></div>
+            <div class="loaderr"></div>
+            <div class="con"></div>
+            <div class="byte"></div>
+            <div class="server"></div>
+          </div>
+    </div>
+    
 
-                <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
-                    <a class="navbar-brand col-lg-2 me-0" href="#"></a>
-                    <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link dropdown t1" aria-current="page" href="index.html"><i
-                                    class='bx bxs-home'></i> หน้าหลัก</a>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">เกี่ยวกับภาควิชา</a>
-                            <div class="dropdown-content">
-                                <a href="about/history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
-                                <a href="about/vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
-                                <a href="about/vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
-                                <a href="about/staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
-                            </div>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">หลักสูตร</a>
-                            <div class="dropdown-content">
-                                <a href="course/computer-science.html"><i class='bx bx-desktop'></i> วิทยาการคอมพิวเตอร์</a>
-                                <a href="course/information-technology.html"><i class='bx bx-wifi'></i> เทคโนยีสารสนเทศ</a>
-                                <a href="course/comed-3.html"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
-                                <a href="course/web-programming.html"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
-                                <a href="course/digital.html"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
-                                <a href="course/vdocourse.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำหลักสูตร</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="all_news.html">ข่าวประชาสัมพันธ์</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="all_activity.html">กิจกรรมของภาควิชา</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link dropdown t1" href="contact.html">ติดต่อภาควิชา</a>
-                        </li>
-                        <li class="dropdown t1">
-                            <a class="dropbtn">อื่นๆ</a>
-                            <div class="dropdown-content">
-                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/"><i class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
-                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/"><i class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
-                                <a target="_blank" href="https://www.istudy.cmru.ac.th/"><i class='bx bxl-redux'></i> การศึกษาอิสระด้านคอมฯ</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="d-lg-flex col-lg-4 justify-content-lg-end">
-                        <a class="button reg" style="vertical-align:middle" href="https://reg.cmru.ac.th/registrar/home.asp" target="_blank"><span><i class='bx bxs-graduation'></i> REG</span></a>
-                    </div>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+            <a href="index.html"><img src="img/logonav.png" alt=""></a>
+            <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
+                href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
+                Computer CMRU</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
+                <a class="navbar-brand col-lg-2 me-0" href="#"></a>
+                <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" aria-current="page" href="index.html"><i
+                                class='bx bxs-home'></i> หน้าหลัก</a>
+                    </li>
+                    <li class="dropdown t1">
+                        <a class="dropbtn">เกี่ยวกับภาควิชา</a>
+                        <div class="dropdown-content">
+                            <a href="about/history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
+                            <a href="about/vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
+                            <a href="about/vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
+                            <a href="about/staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
+                        </div>
+                    </li>
+                    <li class="dropdown t1">
+                        <a class="dropbtn">หลักสูตร</a>
+                        <div class="dropdown-content">
+                            <a href="course/computer-science.html"><i class='bx bx-desktop'></i> วิทยาการคอมพิวเตอร์</a>
+                            <a href="course/information-technology.html"><i class='bx bx-wifi'></i> เทคโนยีสารสนเทศ</a>
+                            <a href="course/comed-3.html"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
+                            <a href="course/web-programming.html"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
+                            <a href="course/digital.html"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
+                            <a href="course/vdocourse.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำหลักสูตร</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" href="all_news.html">ข่าวประชาสัมพันธ์</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" href="all_activity.html">กิจกรรมของภาควิชา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown t1" href="contact.html">ติดต่อภาควิชา</a>
+                    </li>
+                    <li class="dropdown t1">
+                        <a class="dropbtn">อื่นๆ</a>
+                        <div class="dropdown-content">
+                            <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/"><i
+                                    class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
+                            <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/"><i
+                                    class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
+                            <a target="_blank" href="https://www.istudy.cmru.ac.th/"><i class='bx bxl-redux'></i>
+                                การศึกษาอิสระด้านคอมฯ</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-lg-flex col-lg-4 justify-content-lg-end">
+                    <a class="button reg" style="vertical-align:middle" href="https://reg.cmru.ac.th/registrar/home.asp"
+                        target="_blank"><span><i class='bx bxs-graduation'></i> REG</span></a>
                 </div>
             </div>
-        </nav>
-        <!-- End Navbar -->
+        </div>
+    </nav>
+    <!-- End Navbar -->
 
-        <!-- Start Carousel -->
-        <a name="top">
-        <div class="container topp"></div>
+    <!-- Start Carousel -->
+    <a name="top">
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
@@ -400,7 +427,8 @@
                     <a href="course/web-programming.html"><img src="img/b02.png" alt="" width="100%" height="100%"></a>
                 </div>
                 <div class="carousel-item">
-                    <a href="course/information-technology.html"><img src="img/b03.png" alt="" width="100%" height="100%"></a>
+                    <a href="course/information-technology.html"><img src="img/b03.png" alt="" width="100%"
+                            height="100%"></a>
                 </div>
                 <div class="carousel-item">
                     <a href="course/digital.html"><img src="img/b04.png" alt="" width="100%" height="100%"></a>
@@ -750,35 +778,40 @@
                 <div class="row">
                     <div class="col">
                         <div class="container c4 ii">
-                            <a href="course/information-technology.html" style="border: none;"><img src="img/it.png" style="width:100%"></a>
+                            <a href="course/information-technology.html" style="border: none;"><img src="img/it.png"
+                                    style="width:100%"></a>
                         </div>
                         <h6 class="hc">สาขาวิชา เทคโนโลยีสารสนเทศ</h6>
                     </div>
 
                     <div class="col">
                         <div class="container c4 ii">
-                            <a href="course/computer-science.html" style="border: none;"><img src="img/comsci.png" style="width:100%"></a>
+                            <a href="course/computer-science.html" style="border: none;"><img src="img/comsci.png"
+                                    style="width:100%"></a>
                         </div>
                         <h6 class="hc">สาขาวิชา วิทยาการคอมพิวเตอร์</h6>
                     </div>
 
                     <div class="col">
                         <div class="container c4 ii">
-                            <a href="course/comed-3.html" style="border: none;"><img src="img/come.png" style="width:100%"></a>
+                            <a href="course/comed-3.html" style="border: none;"><img src="img/come.png"
+                                    style="width:100%"></a>
                         </div>
                         <h6 class="hc">สาขาวิชา คอมพิวเตอร์ศึกษา</h6>
                     </div>
 
                     <div class="col">
                         <div class="container c4 ii">
-                            <a href="course/web-programming.html" style="border: none;"><img src="img/web.png" style="width:100%"></a>
+                            <a href="course/web-programming.html" style="border: none;"><img src="img/web.png"
+                                    style="width:100%"></a>
                         </div>
                         <h6 class="hc">สาขาวิชา เทคโนโลยีเว็บ</h6>
                     </div>
 
                     <div class="col">
                         <div class="container c4 ii">
-                            <a href="course/digital.html" style="border: none;"><img src="img/lcom.png" style="width:100%"></a>
+                            <a href="course/digital.html" style="border: none;"><img src="img/lcom.png"
+                                    style="width:100%"></a>
                         </div>
                         <h6 class="hc">สาขาวิชา นวัตกรรมดิจิทัล</h6>
                     </div>
@@ -829,9 +862,11 @@
                                     saraban@cmru.ac.th
                                     <hr>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/cmrufans" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/cmrufans" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
-                                        <a href="https://www.cmru.ac.th/" target="_blank" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                        <a href="https://www.cmru.ac.th/" target="_blank" class="btn btn-success ct"><i
+                                                class="bi bi-browser-safari"></i> :
                                             Website</a>
                                     </div>
                                 </div>
@@ -885,9 +920,11 @@
                                     (ติดต่อสอบถาม) <br>
                                     <hr>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/SciTechCMRU" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/SciTechCMRU" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
-                                        <a href="https://www.science.cmru.ac.th/" target="_blank" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                        <a href="https://www.science.cmru.ac.th/" target="_blank"
+                                            class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
                                             Website</a>
                                     </div>
                                 </div>
@@ -934,9 +971,11 @@
                                     registrar@cmru.ac.th <br>
                                     <hr>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/regcmru" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/regcmru" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
-                                        <a href="http://www.academic.cmru.ac.th/" target="_blank" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                        <a href="http://www.academic.cmru.ac.th/" target="_blank"
+                                            class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
                                             Website</a>
                                     </div>
                                 </div>
@@ -978,9 +1017,11 @@
                                     <br>
                                     <hr>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/digital.cmru" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/digital.cmru" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
-                                        <a href="https://www.digital.cmru.ac.th/" target="_blank" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                        <a href="https://www.digital.cmru.ac.th/" target="_blank"
+                                            class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
                                             Website</a>
                                     </div>
                                 </div>
@@ -1021,7 +1062,8 @@
                                     (เบอร์โทรศัพท์) <br>
                                     <hr>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/Activity.CMRU" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/Activity.CMRU" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
                                     </div>
                                 </div>
@@ -1058,7 +1100,8 @@
                                     053-885432
                                     (เบอร์โทรศัพท์) <br>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/studentloan.cmru" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/studentloan.cmru" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
                                     </div>
                                 </div>
@@ -1094,9 +1137,11 @@
                                     (ID
                                     Line) <br>
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/sdd.cmru" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/sdd.cmru" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
-                                        <a href="https://www.sdd.cmru.ac.th/" target="_blank" class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
+                                        <a href="https://www.sdd.cmru.ac.th/" target="_blank"
+                                            class="btn btn-success ct"><i class="bi bi-browser-safari"></i> :
                                             Website</a>
                                     </div>
                                 </div>
@@ -1125,7 +1170,8 @@
                                 </div>
                                 <div class="modal-body fm" style="text-align: start;">
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/STCMRU" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/STCMRU" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
                                     </div>
                                 </div>
@@ -1155,7 +1201,8 @@
                                 </div>
                                 <div class="modal-body fm" style="text-align: start;">
                                     <div class="text-center">
-                                        <a href="https://www.facebook.com/Rodor.cmru" target="_blank" class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
+                                        <a href="https://www.facebook.com/Rodor.cmru" target="_blank"
+                                            class="btn btn-primary ct"><i class="bi bi-facebook"></i> :
                                             Pages</a>
                                     </div>
                                 </div>
@@ -1176,19 +1223,23 @@
                         <div class="col-6 col-md-2 mb-3">
                             <h4 class="text-body-secondary">เกี่ยวกับภาควิชา</h4>
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="about/history.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bx-revision bx-spin' style='color:#ffffff'></i> ประวัติภาควิชา</a>
+                                <li class="nav-item mb-2"><a href="about/history.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-revision bx-spin'
+                                            style='color:#ffffff'></i> ประวัติภาควิชา</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="about/vision.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bxs-diamond bx-tada' style='color:#ffffff'></i> ปรัชญา วิสัยทัศน์
+                                <li class="nav-item mb-2"><a href="about/vision.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-diamond bx-tada'
+                                            style='color:#ffffff'></i> ปรัชญา วิสัยทัศน์
                                         พันธกิจ</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="about/vdo.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
+                                <li class="nav-item mb-2"><a href="about/vdo.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-movie-play bx-tada'
+                                            style='color:#ffffff'></i>
                                         วีดิทัศน์แนะนำภาควิชา</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="about/staff.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bxs-user-badge bx-tada' style='color:#ffffff'></i> บุคลาลากร</a>
+                                <li class="nav-item mb-2"><a href="about/staff.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-user-badge bx-tada'
+                                            style='color:#ffffff'></i> บุคลาลากร</a>
                                 </li>
                             </ul>
                         </div>
@@ -1196,26 +1247,32 @@
                         <div class="col-6 col-md-2 mb-3">
                             <h4 class="text-body-secondary">หลักสูตร</h4>
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="course/computer-science.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bx-desktop bx-tada' style='color:#ffffff'></i>
+                                <li class="nav-item mb-2"><a href="course/computer-science.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-desktop bx-tada'
+                                            style='color:#ffffff'></i>
                                         วิทยาการคอมพิวเตอร์</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="course/information-technology.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bx-wifi bx-flashing' style='color:#ffffff'></i>
+                                <li class="nav-item mb-2"><a href="course/information-technology.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-wifi bx-flashing'
+                                            style='color:#ffffff'></i>
                                         เทคโนยีสารสนเทศ</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="course/comed-3.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bx-chalkboard bx-tada' style='color:#ffffff'></i>
+                                <li class="nav-item mb-2"><a href="course/comed-3.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-chalkboard bx-tada'
+                                            style='color:#ffffff'></i>
                                         คอมพิวเตอร์ศึกษา</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="course/web-programming.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bx-code-alt bx-tada' style='color:#ffffff'></i> เทคโนโลยีเว็บ</a>
+                                <li class="nav-item mb-2"><a href="course/web-programming.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-code-alt bx-tada'
+                                            style='color:#ffffff'></i> เทคโนโลยีเว็บ</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="course/digital.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bxs-cog bx-spin' style='color:#ffffff'></i> นวัตกรรมดิจิทัล</a>
+                                <li class="nav-item mb-2"><a href="course/digital.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-cog bx-spin'
+                                            style='color:#ffffff'></i> นวัตกรรมดิจิทัล</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="course/vdocourse.html" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
+                                <li class="nav-item mb-2"><a href="course/vdocourse.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-movie-play bx-tada'
+                                            style='color:#ffffff'></i>
                                         วีดิทัศน์แนะนำหลักสูตร</a>
                                 </li>
                             </ul>
@@ -1224,16 +1281,19 @@
                         <div class="col-6 col-md-2 mb-3">
                             <h4 class="text-body-secondary">อื่นๆ</h4>
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/internship/" target="_blank" class="nav-link p-0 text-body-secondary"><i
+                                <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/internship/"
+                                        target="_blank" class="nav-link p-0 text-body-secondary"><i
                                             class='bx bxs-briefcase bx-tada' style='color:#ffffff'></i>
                                         เตรียม/ฝึกประสบการณ์</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/comed/" target="_blank" class="nav-link p-0 text-body-secondary"><i
+                                <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/comed/"
+                                        target="_blank" class="nav-link p-0 text-body-secondary"><i
                                             class='bx bxs-graduation bx-tada' style='color:#ffffff'></i>
                                         ฝึกประสบการณ์วิชาชีพครู</a>
                                 </li>
-                                <li class="nav-item mb-2"><a href="https://www.istudy.cmru.ac.th/" target="_blank" class="nav-link p-0 text-body-secondary"><i
-                                            class='bx bxl-redux bx-spin' style='color:#ffffff'></i>
+                                <li class="nav-item mb-2"><a href="https://www.istudy.cmru.ac.th/" target="_blank"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxl-redux bx-spin'
+                                            style='color:#ffffff'></i>
                                         การศึกษาอิสระด้านคอมฯ</a>
                                 </li>
                             </ul>
@@ -1251,7 +1311,8 @@
                                         0-5388-5635(โทรศัพท์) <br>
                                         <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
                                         0-5388-5635(โทรสาร) <br><br><br>
-                                        <a href="https://www.facebook.com/CMRUCOMPUTER" target="_blank" class="text-body-secondary" style="font-size: 20px;">
+                                        <a href="https://www.facebook.com/CMRUCOMPUTER" target="_blank"
+                                            class="text-body-secondary" style="font-size: 20px;">
                                             <i class='bx bxl-facebook-circle bx-tada' style='color:#3EC387'></i> :
                                             ภาควิชาคอมพิวเตอร์ CMRU
                                         </a>
@@ -1279,6 +1340,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+        <script src="loading.js"></script>
 </body>
 
 </html>

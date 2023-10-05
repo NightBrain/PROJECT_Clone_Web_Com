@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT US</title>
+    <link rel="stylesheet" href="ro.css">
 
     <link rel="stylesheet" href="about/sty.css">
     <!-- Favicon -->
@@ -279,93 +280,121 @@
             box-shadow: 5px 10px 8px #888888;
             background-color: #FFFFFF;
         }
+
         .tcen {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .ro  {
+            width: 100px;
+            height: 70px;
+        }
+        @media screen and (max-width: 480px) {
+            .ro {
+                width: 60px;
+                height: 40px;
+            }
+        
         }
 
         @media screen and (max-width: 480px) {
             .c6 {
                 height: 750px;
             }
+
             .kk {
                 width: 320px;
                 height: 225px;
+            }
+
         }
-        }
+
         .kk {
             border-radius: 25px;
         }
+
     </style>
 </head>
 
 <body>
     <!-- Start Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
-        <div class="container-fluid">
-            <a href="index.html"><img src="img/logonav.png" alt=""></a>
-            <a class="navbar-brand" style="padding: 10px; font-size: 15px;"
-                href="index.html">ภาควิชาคอมพิวเตอร์<br>Department of
-                Computer CMRU</a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <a name="top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded cc" aria-label="Thirteenth navbar example">
+            <div class="container-fluid">
+                <a href="index.html">
+                    <div class="container ro">
+                        <img src="img/ro.gif" width="100%" height="100%">
+                    </div>
+                </a>
+                <a class="navbar-brand" style="padding: 10px; font-size: 15px;" href="index.html">
+                    ภาควิชาคอมพิวเตอร์<br>Department of Computer CMRU</a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
-                <a class="navbar-brand col-lg-2 me-0" href="#"></a>
-                <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link dropdown t1" aria-current="page" href="index.html"><i
-                                class='bx bxs-home'></i> หน้าหลัก</a>
-                    </li>
-                    <li class="dropdown t1">
-                        <a class="dropbtn">เกี่ยวกับภาควิชา</a>
-                        <div class="dropdown-content">
-                            <a href="about/history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
-                            <a href="about/vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
-                            <a href="about/vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
-                            <a href="about/staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
-                        </div>
-                    </li>
-                    <li class="dropdown t1">
-                        <a class="dropbtn">หลักสูตร</a>
-                        <div class="dropdown-content">
-                            <a href="course/computer-science.html"><i class='bx bx-desktop'></i> วิทยาการคอมพิวเตอร์</a>
-                            <a href="course/information-technology.html"><i class='bx bx-wifi'></i> เทคโนยีสารสนเทศ</a>
-                            <a href="course/comed-3.html"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
-                            <a href="course/web-programming.html"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
-                            <a href="course/digital.html"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
-                            <a href="course/vdocourse.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำหลักสูตร</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown t1" href="all_news.html">ข่าวประชาสัมพันธ์</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown t1" href="all_activity.html">กิจกรรมของภาควิชา</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown t1" href="contact.html">ติดต่อภาควิชา</a>
-                    </li>
-                    <li class="dropdown t1">
-                        <a class="dropbtn">อื่นๆ</a>
-                        <div class="dropdown-content">
-                            <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/"><i class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
-                            <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/"><i class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
-                            <a target="_blank" href="https://www.istudy.cmru.ac.th/"><i class='bx bxl-redux'></i> การศึกษาอิสระด้านคอมฯ</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="d-lg-flex col-lg-4 justify-content-lg-end">
-                    <a class="button reg" style="vertical-align:middle" href="https://reg.cmru.ac.th/registrar/home.asp" target="_blank"><span><i class='bx bxs-graduation'></i> REG</span></a>
+                <div class="navbar-collapse d-lg-flex collapse" id="navbarsExample11">
+                    <a class="navbar-brand col-lg-1 me-0" href="#"></a>
+                    <ul class="navbar-nav col-lg-7 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown t1" aria-current="page" href="index.html"><i
+                                    class='bx bxs-home'></i> หน้าหลัก</a>
+                        </li>
+                        <li class="dropdown t1">
+                            <a class="dropbtn">เกี่ยวกับภาควิชา</a>
+                            <div class="dropdown-content">
+                                <a href="about/history.html"><i class='bx bx-history'></i> ประวัติภาควิชา</a>
+                                <a href="about/vision.html"><i class='bx bxs-diamond'></i> ปรัชญา วิสัยทัศน์ พันธกิจ</a>
+                                <a href="about/vdo.html"><i class='bx bxs-movie-play'></i> วีดิทัศน์แนะนำภาควิชา</a>
+                                <a href="about/staff.html"><i class='bx bxs-user-badge'></i> บุคลาลากร</a>
+                            </div>
+                        </li>
+                        <li class="dropdown t1">
+                            <a class="dropbtn">หลักสูตร</a>
+                            <div class="dropdown-content">
+                                <a href="course/computer-science.html"><i class='bx bx-desktop'></i>
+                                    วิทยาการคอมพิวเตอร์</a>
+                                <a href="course/information-technology.html"><i class='bx bx-wifi'></i>
+                                    เทคโนยีสารสนเทศ</a>
+                                <a href="course/comed-3.html"><i class='bx bx-chalkboard'></i> คอมพิวเตอร์ศึกษา</a>
+                                <a href="course/web-programming.html"><i class='bx bx-code-alt'></i> เทคโนโลยีเว็บ</a>
+                                <a href="course/digital.html"><i class='bx bxs-cog'></i> นวัตกรรมดิจิทัล</a>
+                                <a href="course/vdocourse.html"><i class='bx bxs-movie-play'></i>
+                                    วีดิทัศน์แนะนำหลักสูตร</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown t1" href="all_news.html">ข่าวประชาสัมพันธ์</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown t1" href="all_activity.html">กิจกรรมของภาควิชา</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown t1" href="contact.html">ติดต่อภาควิชา</a>
+                        </li>
+                        <li class="dropdown t1">
+                            <a class="dropbtn">อื่นๆ</a>
+                            <div class="dropdown-content">
+                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/internship/"><i
+                                        class='bx bxs-briefcase'></i> เตรียม/ฝึกประสบการณ์</a>
+                                <a target="_blank" href="https://sites.google.com/g.cmru.ac.th/comed/"><i
+                                        class='bx bxs-graduation'></i> ฝึกประสบการณ์วิชาชีพครู</a>
+                                <a target="_blank" href="https://www.istudy.cmru.ac.th/"><i class='bx bxl-redux'></i>
+                                    การศึกษาอิสระด้านคอมฯ</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-lg-flex col-lg-4 justify-content-lg-end">
+                        <a class="button reg" style="vertical-align:middle"
+                            href="https://reg.cmru.ac.th/registrar/home.asp" target="_blank"><span><i
+                                    class='bx bxs-graduation'></i> REG</span></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- End Navbar -->
+        </nav>
+        <!-- End Navbar -->
 
         <!-- Start Carousel -->
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
@@ -391,16 +420,26 @@
                             <h5>คณะวิทยาศาสตร์และเทคโนโลยี<br>
                                 มหาวิทยาลัยราชภัฏเชียงใหม่
                             </h5>
-                            <h5><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : 180 หมู่ 7 ถนนโชตนา (เชียงใหม่-ฝาง) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5635 (โทรศัพท์) <br>
-                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5635 (โทรสาร)<br>
+                            <h5><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : 180 หมู่ 7 ถนนโชตนา
+                                (เชียงใหม่-ฝาง) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ตำบลขี้เหล็ก อำเภอแม่ริม
+                                จังหวัดเชียงใหม่ 50180 <br>
+                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5635
+                                (โทรศัพท์) <br>
+                                <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> : 0-5388-5635
+                                (โทรสาร)<br>
                             </h5>
                             <br><br>
-                            <a target="_blank" href="https://www.facebook.com/CMRUCOMPUTER"><h4><i class='bx bxl-facebook-circle bx-tada'style='color:#3EC387' ></i> : ภาควิชาคอมพิวเตอร์ CMRU</h4></a>
+                            <a target="_blank" href="https://www.facebook.com/CMRUCOMPUTER">
+                                <h4><i class='bx bxl-facebook-circle bx-tada' style='color:#3EC387'></i> :
+                                    ภาควิชาคอมพิวเตอร์ CMRU</h4>
+                            </a>
                         </div>
                         <div class="col">
                             <div class="container">
-                                <iframe class="kk" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1663.5190470837001!2d98.9255085347503!3d19.02094700359197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da1770ae88766b%3A0x91ffb939bbc141c4!2z4Lig4Liy4LiE4Lin4Li04LiK4Liy4LiE4Lit4Lih4Lie4Li04Lin4LmA4LiV4Lit4Lij4LmMIC8g4Lig4Liy4LiE4Lin4Li04LiK4Liy4LiE4LiT4Li04LiV4Lio4Liy4Liq4LiV4Lij4LmM4LmB4Lil4Liw4Liq4LiW4Li04LiV4Li0KOC4reC4suC4hOC4suC4oyBTQ0k5KQ!5e1!3m2!1sth!2sth!4v1695973673891!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe class="kk"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1663.5190470837001!2d98.9255085347503!3d19.02094700359197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da1770ae88766b%3A0x91ffb939bbc141c4!2z4Lig4Liy4LiE4Lin4Li04LiK4Liy4LiE4Lit4Lih4Lie4Li04Lin4LmA4LiV4Lit4Lij4LmMIC8g4Lig4Liy4LiE4Lin4Li04LiK4Liy4LiE4LiT4Li04LiV4Lio4Liy4Liq4LiV4Lij4LmM4LmB4Lil4Liw4Liq4LiW4Li04LiV4Li0KOC4reC4suC4hOC4suC4oyBTQ0k5KQ!5e1!3m2!1sth!2sth!4v1695973673891!5m2!1sth!2sth"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -410,113 +449,127 @@
         <!-- End contact -->
 
 
-      <!-- Start Footer-->
-      <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
-        <div class="container">
-            <footer class="py-5">
-                <div class="row">
-                    <div class="col-6 col-md-2 mb-3">
-                        <h4 class="text-body-secondary">เกี่ยวกับภาควิชา</h4>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="about/history.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bx-revision bx-spin' style='color:#ffffff'></i> ประวัติภาควิชา</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="about/vision.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-diamond bx-tada' style='color:#ffffff'></i> ปรัชญา วิสัยทัศน์
-                                    พันธกิจ</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="about/vdo.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
-                                    วีดิทัศน์แนะนำภาควิชา</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="about/staff.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-user-badge bx-tada' style='color:#ffffff'></i> บุคลาลากร</a>
-                            </li>
+        <!-- Start Footer-->
+        <div class="footer" style="background-color: #212529;" data-bs-theme="dark">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">เกี่ยวกับภาควิชา</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="about/history.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-revision bx-spin'
+                                            style='color:#ffffff'></i> ประวัติภาควิชา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="about/vision.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-diamond bx-tada'
+                                            style='color:#ffffff'></i> ปรัชญา วิสัยทัศน์
+                                        พันธกิจ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="about/vdo.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-movie-play bx-tada'
+                                            style='color:#ffffff'></i>
+                                        วีดิทัศน์แนะนำภาควิชา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="about/staff.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-user-badge bx-tada'
+                                            style='color:#ffffff'></i> บุคลาลากร</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">หลักสูตร</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="course/computer-science.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-desktop bx-tada'
+                                            style='color:#ffffff'></i>
+                                        วิทยาการคอมพิวเตอร์</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="course/information-technology.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-wifi bx-flashing'
+                                            style='color:#ffffff'></i>
+                                        เทคโนยีสารสนเทศ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="course/comed-3.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-chalkboard bx-tada'
+                                            style='color:#ffffff'></i>
+                                        คอมพิวเตอร์ศึกษา</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="course/web-programming.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bx-code-alt bx-tada'
+                                            style='color:#ffffff'></i> เทคโนโลยีเว็บ</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="course/digital.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-cog bx-spin'
+                                            style='color:#ffffff'></i> นวัตกรรมดิจิทัล</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="course/vdocourse.html"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxs-movie-play bx-tada'
+                                            style='color:#ffffff'></i>
+                                        วีดิทัศน์แนะนำหลักสูตร</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h4 class="text-body-secondary">อื่นๆ</h4>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/internship/"
+                                        target="_blank" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-briefcase bx-tada' style='color:#ffffff'></i>
+                                        เตรียม/ฝึกประสบการณ์</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/comed/"
+                                        target="_blank" class="nav-link p-0 text-body-secondary"><i
+                                            class='bx bxs-graduation bx-tada' style='color:#ffffff'></i>
+                                        ฝึกประสบการณ์วิชาชีพครู</a>
+                                </li>
+                                <li class="nav-item mb-2"><a href="https://www.istudy.cmru.ac.th/" target="_blank"
+                                        class="nav-link p-0 text-body-secondary"><i class='bx bxl-redux bx-spin'
+                                            style='color:#ffffff'></i>
+                                        การศึกษาอิสระด้านคอมฯ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form>
+                                <h4 class="text-body-secondary">ภาควิชาคอมพิวเตอร์</h4>
+                                <h6 class="text-body-secondary">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
+                                </h6><br>
+                                <div class="text-body-secondary">
+                                    <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7
+                                        ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
+                                        <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                        0-5388-5635(โทรศัพท์) <br>
+                                        <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
+                                        0-5388-5635(โทรสาร) <br><br><br>
+                                        <a href="https://www.facebook.com/CMRUCOMPUTER" target="_blank"
+                                            class="text-body-secondary" style="font-size: 20px;">
+                                            <i class='bx bxl-facebook-circle bx-tada' style='color:#3EC387'></i> :
+                                            ภาควิชาคอมพิวเตอร์ CMRU
+                                        </a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <p class="text-body-secondary">Copyright &copy;2023 Department of Computer CMRU. All rights
+                            reserved Designed By <span><a target="_blank" class="foot"
+                                    href="https://github.com/NightBrain">@NightBrain</a></span></p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-body-emphasis" href="#top">GO TO TOP <i
+                                        class='bx bxs-to-top bx-fade-down' style='color:#ffffff'></i></a></li>
                         </ul>
                     </div>
-
-                    <div class="col-6 col-md-2 mb-3">
-                        <h4 class="text-body-secondary">หลักสูตร</h4>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="course/computer-science.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bx-desktop bx-tada' style='color:#ffffff'></i>
-                                    วิทยาการคอมพิวเตอร์</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="course/information-technology.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bx-wifi bx-flashing' style='color:#ffffff'></i>
-                                    เทคโนยีสารสนเทศ</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="course/comed-3.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bx-chalkboard bx-tada' style='color:#ffffff'></i>
-                                    คอมพิวเตอร์ศึกษา</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="course/web-programming.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bx-code-alt bx-tada' style='color:#ffffff'></i> เทคโนโลยีเว็บ</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="course/digital.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-cog bx-spin' style='color:#ffffff'></i> นวัตกรรมดิจิทัล</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="course/vdocourse.html" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-movie-play bx-tada' style='color:#ffffff'></i>
-                                    วีดิทัศน์แนะนำหลักสูตร</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-2 mb-3">
-                        <h4 class="text-body-secondary">อื่นๆ</h4>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/internship/" target="_blank" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-briefcase bx-tada' style='color:#ffffff'></i>
-                                    เตรียม/ฝึกประสบการณ์</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="https://sites.google.com/g.cmru.ac.th/comed/" target="_blank" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxs-graduation bx-tada' style='color:#ffffff'></i>
-                                    ฝึกประสบการณ์วิชาชีพครู</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="https://www.istudy.cmru.ac.th/" target="_blank" class="nav-link p-0 text-body-secondary"><i
-                                        class='bx bxl-redux bx-spin' style='color:#ffffff'></i>
-                                    การศึกษาอิสระด้านคอมฯ</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-5 offset-md-1 mb-3">
-                        <form>
-                            <h4 class="text-body-secondary">ภาควิชาคอมพิวเตอร์</h4>
-                            <h6 class="text-body-secondary">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่
-                            </h6><br>
-                            <div class="text-body-secondary">
-                                <p><i class='bx bxs-map bx-fade-up' style='color:#3EC387'></i> : เลขที่ 180 หมู่ 7
-                                    ถนนโชตนา ตำบลขี้เหล็ก อำเภอแม่ริม จังหวัดเชียงใหม่ 50180 <br>
-                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
-                                    0-5388-5635(โทรศัพท์) <br>
-                                    <i class='bx bx-mobile-vibration bx-tada' style='color:#3EC387'></i> :
-                                    0-5388-5635(โทรสาร) <br><br><br>
-                                    <a href="https://www.facebook.com/CMRUCOMPUTER" target="_blank" class="text-body-secondary" style="font-size: 20px;">
-                                        <i class='bx bxl-facebook-circle bx-tada' style='color:#3EC387'></i> :
-                                        ภาควิชาคอมพิวเตอร์ CMRU
-                                    </a>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p class="text-body-secondary">Copyright &copy;2023 Department of Computer CMRU. All rights
-                        reserved Designed By <span><a target="_blank" class="foot"
-                                href="https://github.com/NightBrain">@NightBrain</a></span></p>
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a class="link-body-emphasis" href="#top">GO TO TOP <i
-                                    class='bx bxs-to-top bx-fade-down' style='color:#ffffff'></i></a></li>
-                    </ul>
-                </div>
-            </footer>
+                </footer>
+            </div>
         </div>
-    </div>
 
-    <!-- End Footer-->
+        <!-- End Footer-->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
